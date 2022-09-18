@@ -37,7 +37,7 @@ Example1: @Configuration Annotation
 ```
 
 - Create three pakages naming - beans, config and main
-- Inside bean package create a Class called <span style="color:orange">'vehicle'</span>. This class will look like the following code.
+- Inside bean package create a Class called 'vehicle'. This class will look like the following code.
 
 ```java
 package org.navi.beans;
@@ -55,7 +55,7 @@ public class Vehicle {
 }
 ```
 
-- Inside config package, create a new Class clalled <span style="color:orange">'ProjConfig'</span>. This class 
+- Inside config package, create a new Class clalled 'ProjConfig'. This class 
 will look as the following code.
 ```java
 package org.navi.config;
@@ -89,7 +89,7 @@ public class ProjConfig {
 ```
 Here we notice that we have two annotations **@Configuration** and **@Bean**.
 
-- Then we make the main class in the main package(in my case it is <span style="color:orange">Example1</span>).
+- Then we make the main class in the main package(in my case it is Example1).
 This is how it looks like. 
 ```java
 package org.navi.main;
@@ -125,12 +125,6 @@ public class Example1 {
     }
 }
 ```
-The **most important part in the class is** -
-creating an object of " **<span style="color:red">AnnotationConfigApplicationContext(ProjConfig.class);</span>** " and 
-<br>
-using this object called " **<span style="color:red">context<span>** " to get beans from the IoC container. 
-
-
 Here we have a *Vehicle object : **vehicle***, created my a developer and not taken from the spring context.
 <br>
 Then we have a *Vehicle object: **veh***, taken from the IoC container or Spring context. 
