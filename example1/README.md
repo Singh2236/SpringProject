@@ -129,7 +129,16 @@ Here we have a *Vehicle object : **vehicle***, created my a developer and not ta
 <br>
 Then we have a *Vehicle object: **veh***, taken from the IoC container or Spring context. 
 
-Following is the output of the following code. 
+Following is the output of the following code.
+
+```
+Vehicle name from non-spring context: Maruti
+Vehicle's name from the spring context: Audi
+Hello World
+65
+
+Process finished with exit code 0
+```
 
 
 
