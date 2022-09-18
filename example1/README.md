@@ -128,7 +128,7 @@ public class Example1 {
 The **most important part in the class is** -
 creating an object of " **<span style="color:red">AnnotationConfigApplicationContext(ProjConfig.class);</span>** " and 
 <br>
-using this object called " **<span style="color:red">context<span>** " to get beans from the IoC container. 
+using this object called " **<span style="color:red">context** " to get beans from the IoC container. 
 
 
 Here we have a *Vehicle object : **vehicle***, created my a developer and not taken from the spring context.
