@@ -24,9 +24,9 @@ public class Example1 {
         * */
 
         String stringBean = context.getBean(String.class);
-        System.out.println(stringBean);
+        System.out.println("String from the spring context: "+stringBean);
 
         Integer integerBean = context.getBean(Integer.class);
-        System.out.println(integerBean);
+        System.out.println("Integer from the Spring context: "+integerBean);
     }
 }
