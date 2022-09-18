@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example1/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example1/src/main/java/org/navi/config/ProjConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example1/src/main/java/org/navi/main/Example1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="working model of context awareness">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example1/src/main/java/org/navi/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example1/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +41,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18"
+    "jdk.selected.JAVA_MODULE": "18",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -99,8 +91,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663494321021</updated>
-      <workItem from="1663494322398" duration="5191000" />
+      <workItem from="1663494322398" duration="6156000" />
     </task>
+    <task id="LOCAL-00001" summary="working model of context awareness">
+      <created>1663502181904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663502181904</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,5 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="working model of context awareness" />
+    <option name="LAST_COMMIT_MESSAGE" value="working model of context awareness" />
   </component>
 </project>

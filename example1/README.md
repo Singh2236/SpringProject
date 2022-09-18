@@ -37,5 +37,99 @@ Example1: @Configuration Annotation
 ```
 
 - Create three pakages naming - beans, config and main
-- Inside bean package 
+- Inside bean package create a Class called 'vehicle'. This class will look like the following code.
+
+```java
+package org.navi.beans;
+
+public class Vehicle {
+    private String name;
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+}
+```
+
+- Inside config package, create a new Class clalled 'ProjConfig'. This class 
+will look as the following code.
+```java
+package org.navi.config;
+
+import org.navi.beans.Vehicle;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ProjConfig {
+
+    @Bean  //Means that whenever we create an object of Vehicle class through spring context we will get this bean and
+            // the name of the vehicle is going to be Audi.
+    Vehicle vehicle() {
+        Vehicle veh = new Vehicle();
+        veh.setName("Audi");
+        return veh;
+    }
+
+
+    @Bean
+    String hello() {
+        return "Hello World";
+    }
+
+    @Bean
+    Integer integer(){
+        return 65;
+    }
+}
+```
+Here we notice that we have two annotations **@Configuration** and **@Bean**.
+
+- Then we make the main class in the main package(in my case it is Example1).
+This is how it looks like. 
+```java
+package org.navi.main;
+
+import org.navi.beans.Vehicle;
+import org.navi.config.ProjConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Example1 {
+    public static void main(String[] args) {
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.setName("Maruti");
+        System.out.println("Vehicle name from non-spring context: " + vehicle.getName());
+
+
+        var context = new AnnotationConfigApplicationContext(ProjConfig.class);
+
+        Vehicle veh = context.getBean(Vehicle.class);
+        System.out.println("Vehicle's name from the spring context: " + veh.getName());
+
+        /*
+        * We don't need to do any explicit casting while fetching a Bean from the context.
+        * Spring is smart enough to look for a Bean of the type you requested in its context.
+        * If such a Bean doesn't exist, it will through an error.
+        * */
+
+        String stringBean = context.getBean(String.class);
+        System.out.println(stringBean);
+
+        Integer integerBean = context.getBean(Integer.class);
+        System.out.println(integerBean);
+    }
+}
+```
+Here we have a *Vehicle object : **vehicle***, created my a developer and not taken from the spring context.
+<br>
+Then we have a *Vehicle object: **veh***, taken from the IoC container or Spring context. 
+
+Following is the output of the following code. 
+
+
 
