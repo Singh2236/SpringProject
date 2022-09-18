@@ -17,13 +17,13 @@ public class ProjConfig {
     @Bean
     Vehicle vehicle2() {
         Vehicle veh = new Vehicle();
-        veh.setName("Audi");
+        veh.setName("Maruti");
         return veh;
     }
     @Bean
     Vehicle vehicle3() {
         Vehicle veh = new Vehicle();
-        veh.setName("Audi");
+        veh.setName("Kia");
         return veh;
     }
 
