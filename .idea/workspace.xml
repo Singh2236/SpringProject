@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Adding new beans to the Spring context">
-      <change afterPath="$PROJECT_DIR$/example4/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example4/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example4/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example4/src/main/java/org/navi/config/ProjConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example4/src/main/java/org/navi/main/Example4.java" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Primary Annotation">
+      <change afterPath="$PROJECT_DIR$/example5/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example5/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example5/src/main/java/org/navi/config/ProjConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example5/src/main/java/org/navi/main/Example5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -55,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject/example4",
+    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject/example5",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -71,7 +71,7 @@
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.navi.main.Example4">
+  <component name="RunManager" selected="Application.Example5">
     <configuration name="Example1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.navi.main.Example1" />
       <module name="example1" />
@@ -111,6 +111,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Example5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example5" />
+      <module name="example5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.navi.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="org.navi.main.Example4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.navi.main.Example4" />
       <module name="example4" />
@@ -138,6 +151,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Example5" />
       <item itemvalue="Application.Example1" />
       <item itemvalue="Application.Example2" />
       <item itemvalue="Application.Example3" />
@@ -145,6 +159,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example5" />
         <item itemvalue="Application.org.navi.main.Example4" />
         <item itemvalue="Application.Example3" />
         <item itemvalue="Application.Example2" />
@@ -160,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663494321021</updated>
-      <workItem from="1663494322398" duration="10598000" />
+      <workItem from="1663494322398" duration="11077000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -218,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663508723721</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Primary Annotation">
+      <created>1663509658333</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663509658333</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +264,7 @@
     <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
     <MESSAGE value="Different ways to Name a Bean" />
     <MESSAGE value="Adding new beans to the Spring context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding new beans to the Spring context" />
+    <MESSAGE value="Primary Annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primary Annotation" />
   </component>
 </project>
