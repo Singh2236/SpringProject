@@ -143,7 +143,7 @@ Vehicle's name from the spring context: Audi
 Hello World
 65
 
-Process finished with exit code 0
+Process finished with exit code   0
 ```
 
 
