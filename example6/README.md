@@ -1,12 +1,24 @@
-# @PostConstruct 
-This annotation calls the method after the Bean through @Component,
-is instantiated. Here in our case we have initialized the "name" attribute.
+# @PostConstruct
 
-# @PreDestroy 
-This annotation evokes the method right before destroying the bean. 
+- We have seen that when we are using stereotype annptations, we don't have control
+  while creating a bean. But what if want to execure some instructions post Spring creates the bean.
+  For the same, we can use @POstConstruct annotation.
+- We can define a method in the component class and annotation that method with @POstContruct, which
+  instructs Spring to execute that method after it finishes creating them.
+- Spring borrows the @POStConstruct form JavaEE.
+
+# @PreDestroy
+
+- @PreDestroy annotation can be used on the top of the methods and spring will make sure to call this method just
+  before clearing and destroying the context.
+- This can be used in the scenarios where we want to close any IO resources, Database
+  connection etc.
+- Spring borrows the @PreDestroy annotation from Java EE.
 
 Code:
+
 - Pojo/Bean/Component
+
 ````java
 package org.navi.beans;
 
@@ -44,7 +56,9 @@ public class Vehicle {
 }
 
 ````
+
 - ProjectConfig
+
 ````java
 package org.navi.config;
 
@@ -63,6 +77,7 @@ public class ProjConfig {
 ````
 
 - Example 6 /main
+
 ````java
 package org.navi.main;
 

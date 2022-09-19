@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="System Files">
-      <change beforePath="$PROJECT_DIR$/example2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example5/pom.xml" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="system">
+      <change beforePath="$PROJECT_DIR$/example6/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example6/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663494321021</updated>
-      <workItem from="1663494322398" duration="14013000" />
+      <workItem from="1663494322398" duration="14630000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -264,7 +261,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663579530872</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Understanding &amp; Resolving NoUniqueBeanDefinitionException">
+      <created>1663579552666</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663579552666</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Different ways to Name a Bean">
+      <created>1663579573237</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663579573237</updated>
+    </task>
+    <task id="LOCAL-00016" summary="@Primary Annotation">
+      <created>1663579591535</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663579591535</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Bean creation using @component Annotation">
+      <created>1663579605289</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663579605289</updated>
+    </task>
+    <task id="LOCAL-00018" summary="system">
+      <created>1663579620076</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663579620076</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,13 +317,16 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="working model of context awareness" />
     <MESSAGE value="README.md" />
-    <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
-    <MESSAGE value="Different ways to Name a Bean" />
     <MESSAGE value="Adding new beans to the Spring context" />
     <MESSAGE value="Primary Annotation" />
     <MESSAGE value="Bean creation using @Component Annotation" />
     <MESSAGE value="PostConstruct &amp; PreDestroy Annotations" />
     <MESSAGE value="System Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="System Files" />
+    <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
+    <MESSAGE value="Different ways to Name a Bean" />
+    <MESSAGE value="@Primary Annotation" />
+    <MESSAGE value="Bean creation using @component Annotation" />
+    <MESSAGE value="system" />
+    <option name="LAST_COMMIT_MESSAGE" value="system" />
   </component>
 </project>
