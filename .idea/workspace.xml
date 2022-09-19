@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="system">
-      <change beforePath="$PROJECT_DIR$/example6/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example6/README.md" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="@PostConstruct and @PreDestroy in @Component">
+      <change afterPath="$PROJECT_DIR$/example7/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example7/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example7/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example7/src/main/java/org/navi/config/ProjConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example7/src/main/java/org/navi/main/Example7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject/example6",
+    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject/example7",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -64,20 +71,7 @@
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Example6">
-    <configuration name="Example2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example2" />
-      <module name="example2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.navi.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Example7">
     <configuration name="Example3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.navi.main.Example3" />
       <module name="example3" />
@@ -117,6 +111,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Example7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example7" />
+      <module name="example7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.navi.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="org.navi.main.Example4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.navi.main.Example4" />
       <module name="example4" />
@@ -146,17 +153,17 @@
     <list>
       <item itemvalue="Application.Example5" />
       <item itemvalue="Application.Example6" />
-      <item itemvalue="Application.Example2" />
+      <item itemvalue="Application.Example7" />
       <item itemvalue="Application.Example3" />
       <item itemvalue="Application.org.navi.main.Example4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example7" />
         <item itemvalue="Application.Example6" />
         <item itemvalue="Application.Example5" />
         <item itemvalue="Application.org.navi.main.Example4" />
         <item itemvalue="Application.Example3" />
-        <item itemvalue="Application.Example2" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663494321021</updated>
-      <workItem from="1663494322398" duration="14630000" />
+      <workItem from="1663494322398" duration="19424000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -296,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663579620076</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="@PostConstruct and @PreDestroy in @Component">
+      <created>1663580191170</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663580191170</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +341,7 @@
     <MESSAGE value="@Primary Annotation" />
     <MESSAGE value="Bean creation using @component Annotation" />
     <MESSAGE value="system" />
-    <option name="LAST_COMMIT_MESSAGE" value="system" />
+    <MESSAGE value="@PostConstruct and @PreDestroy in @Component" />
+    <option name="LAST_COMMIT_MESSAGE" value="@PostConstruct and @PreDestroy in @Component" />
   </component>
 </project>
