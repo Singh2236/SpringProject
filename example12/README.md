@@ -162,11 +162,11 @@ Added @Primary annotation on vehicle2 and person2, and we got the output above.
 
 **Spring Context --> same bean name --> @Primary annotation --> @Qualifier**
 
-
 ALl the code is same, we just have added @Qualifier annotation for Person Bean. ANd we have removed the @Primary
-annotation from the Vehicle Bean. 
+annotation from the Vehicle Bean.
 
 ````java
+
 @Component  //personBean1 of Person with dependency on VehicleBean1
 public class Person {
     String name = "Lucy";
@@ -192,6 +192,7 @@ public class Person {
     public Vehicle getVehicle() {
         return vehicle;
     }
+
     /*@Autowired*/
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
@@ -205,8 +206,20 @@ Some additional features like You can assign the bean to the main object with th
 ````java
 @Component("person")
 ````
+
 ````java
-Person person = context.getBean("person",Person.class);
+Person person=context.getBean("person",Person.class);
 ````
 
+## Avoid circular dependencies
+
+- A circular dependency will occur when the two beans are waiting for each to create inside the spring context in order
+  to do autowiring.
+- Consider the below scenario, where Person has a dependency on Vehicle and Vehicle has dependency on the Person.
+  in such scenarios, spring will through <span style="color:red"> UnsatisfiedDependenciesExceptions <span> due to
+  circular
+  reference.
+- As a developer, it is our responsibility to make sure we are defining the configurations /configurations that will
+  result in circular dependencies.
+![img.png](img.png)
 
