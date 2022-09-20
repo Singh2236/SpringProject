@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Adding new beans using XMl Configurations">
-      <change afterPath="$PROJECT_DIR$/example9/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/src/main/java/org/navi/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example9/src/main/resources/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Adding new beans using Method Calls">
+      <change afterPath="$PROJECT_DIR$/example9/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example9/src/main/java/org/navi/main/Example9.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example9/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example9/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example9/src/main/java/org/navi/beans/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/example9/src/main/java/org/navi/beans/Person.java" afterDir="false" />
     </list>
-    <list id="deb2046c-d019-4f6a-9314-f2343da94db5" name="SystemFiles" comment="system">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list id="deb2046c-d019-4f6a-9314-f2343da94db5" name="SystemFiles" comment="system" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,30 +28,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="6" end1="12" start2="6" end2="14" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="14" end1="14" start2="16" end2="19" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="24" end1="24" start2="29" end2="31" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="31" end1="31" start2="38" end2="62" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="57" end1="58" start2="88" end2="89" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="73" end1="77" start2="104" end2="108" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="87" end1="90" start2="118" end2="121" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="100" end1="103" start2="131" end2="134" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="113" end1="116" start2="144" end2="147" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="126" end1="129" start2="157" end2="160" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="153" end1="157" start2="184" end2="188" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="161" end1="164" start2="192" end2="196" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="165" end1="166" start2="197" end2="197" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="173" end1="173" start2="204" end2="205" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="177" end1="178" start2="209" end2="210" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="312" end1="313" start2="344" end2="373" changelist="9b7046c7-305e-457f-9004-5f52a5466f8a" />
-        <range start1="342" end1="343" start2="402" end2="402" changelist="deb2046c-d019-4f6a-9314-f2343da94db5" />
-        <range start1="344" end1="345" start2="403" end2="407" changelist="deb2046c-d019-4f6a-9314-f2343da94db5" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject/example9",
+    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -103,10 +71,10 @@
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Example8">
-    <configuration name="Example4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example4" />
-      <module name="example4" />
+  <component name="RunManager" selected="Application.Example9">
+    <configuration name="Example8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example8" />
+      <module name="example8" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.navi.main.*" />
@@ -117,9 +85,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example8" />
-      <module name="example8" />
+    <configuration name="Example9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example9" />
+      <module name="example9" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.navi.main.*" />
@@ -184,18 +152,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Example8" />
+      <item itemvalue="Application.Example9" />
       <item itemvalue="Application.org.navi.main.Example5" />
       <item itemvalue="Application.org.navi.main.Example6" />
       <item itemvalue="Application.org.navi.main.Example7" />
-      <item itemvalue="Application.org.navi.main.Example4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example9" />
         <item itemvalue="Application.Example8" />
         <item itemvalue="Application.org.navi.main.Example7" />
         <item itemvalue="Application.org.navi.main.Example6" />
         <item itemvalue="Application.org.navi.main.Example5" />
-        <item itemvalue="Application.org.navi.main.Example4" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663494321021</updated>
-      <workItem from="1663494322398" duration="24205000" />
+      <workItem from="1663494322398" duration="25211000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -371,7 +339,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663587674476</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Adding new beans using Method Calls">
+      <created>1663671329436</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1663671329436</updated>
+    </task>
+    <task id="LOCAL-00025" summary="system">
+      <created>1663671358128</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1663671358128</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,8 +385,9 @@
     <MESSAGE value="Bean creation using @component Annotation" />
     <MESSAGE value="@PostConstruct and @PreDestroy in @Component" />
     <MESSAGE value="Programmatically registering the beans to the Spring Context." />
-    <MESSAGE value="system" />
     <MESSAGE value="Adding new beans using XMl Configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding new beans using XMl Configurations" />
+    <MESSAGE value="Adding new beans using Method Calls" />
+    <MESSAGE value="system" />
+    <option name="LAST_COMMIT_MESSAGE" value="system" />
   </component>
 </project>

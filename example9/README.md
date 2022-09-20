@@ -72,11 +72,37 @@ public Person person(){
         return person;
         }
 ````
-![img_3.png](img_3.png)
-<!-- Remve this image with code -->
-![img_4.png](img_4.png)
-<!-- Remve this image with code -->
-![img_5.png](img_5.png)
+Example9 / Main class
+
+````java
+package org.navi.main;
+
+import org.navi.beans.Person;
+import org.navi.beans.Vehicle;
+import org.navi.config.ProjectConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Example9 {
+    public static void main(String[] args) {
+        var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        Vehicle vehicle = context.getBean(Vehicle.class);
+        System.out.println("Vehicle from the Spring context: " + vehicle.getName());
+
+        Person person = context.getBean(Person.class);
+        System.out.println("Person from the Spring context: " + person.getName());
+        System.out.println("Vehicle of the Person form the Spring context: " + person.getVehicle().getName());
+
+    }
+}
+````
+
+Console output:
+````
+Vehicle from the Spring context: Toyota
+Person from the Spring context: Lucy
+Vehicle of the Person form the Spring context: Toyota
+
+````
 
 ### There are also other modes of wiring in the Spring 
 
