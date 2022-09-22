@@ -6,6 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="example13" />
+        <module name="example14" />
+        <module name="example11" />
+        <module name="example12" />
+        <module name="example10" />
         <module name="example7" />
         <module name="example6" />
         <module name="example9" />
@@ -13,14 +18,12 @@
         <module name="example3" />
         <module name="example2" />
         <module name="example5" />
+        <module name="example17" />
         <module name="example4" />
         <module name="example1" />
-        <module name="example11" />
-        <module name="example10" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="example12" target="17" />
       <module name="example2 (1)" target="17" />
     </bytecodeTargetLevel>
   </component>
