@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Singleton Bean Scope inside Spring">
-      <change beforePath="$PROJECT_DIR$/example13/src/main/java/org/navi/beans/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/example13/src/main/java/org/navi/beans/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/beans/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/implementations/BoseSpeakers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/implementations/BridgeStoneTyres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/implementations/MichelinTyres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/implementations/SonySpeakers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/interfaces/Speakers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/interfaces/Tyres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/main/Example14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/src/main/java/org/navi/service/VehicleService.java" afterDir="false" />
     </list>
-    <list id="deb2046c-d019-4f6a-9314-f2343da94db5" name="SystemFiles" comment="system">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list id="deb2046c-d019-4f6a-9314-f2343da94db5" name="SystemFiles" comment="system" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663494321021</updated>
       <workItem from="1663494322398" duration="37305000" />
-      <workItem from="1663853845919" duration="6077000" />
+      <workItem from="1663853845919" duration="6384000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -418,7 +426,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663860991566</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Assignment related to Beans, Autowiring, DI">
+      <created>1663861129433</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663861129433</updated>
+    </task>
+    <task id="LOCAL-00037" summary="system">
+      <created>1663861236386</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1663861236386</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Singleton Bean Scope inside Spring">
+      <created>1663861306336</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1663861306336</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,9 +484,9 @@
     <MESSAGE value="Wiring Beans using method parameters" />
     <MESSAGE value="Injecting Beans using @Autowired on class fields" />
     <MESSAGE value="Injecting Beans using Autowired Annotation on Class Fields, SetterMethod() and on Constructor" />
-    <MESSAGE value="system" />
     <MESSAGE value="Autowiring multiple beans of the same type" />
     <MESSAGE value="Assignment related to Beans, Autowiring, DI" />
+    <MESSAGE value="system" />
     <MESSAGE value="Singleton Bean Scope inside Spring" />
     <option name="LAST_COMMIT_MESSAGE" value="Singleton Bean Scope inside Spring" />
   </component>
