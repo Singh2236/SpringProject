@@ -1,8 +1,8 @@
 package org.navi.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
+
+
 import org.springframework.stereotype.Component;
 
 @Component("person") //personBean1 of Person with dependency on VehicleBean1
