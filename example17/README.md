@@ -150,3 +150,59 @@ spring AOP are given below:
 1. By Spring1.2 Old style (dtd based) (also supported in Spring3)
 2. By AspectJ annotation-style
 3. By Spring XML configuration-style(schema based)
+
+# Implementations
+
+Annotation in the Project config class
+
+````java
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@EnableAspectJAutoProxy
+public class ProjectConfig(){
+    
+}
+````
+
+Then we need to create the aspect logic, that we want to be executed, whenever a method is intercepted by the AOP 
+framework, definitely, we can't write the logic without a method and these methods has to present inside the java class.
+We need to create a java class. 
+
+
+Let's make a class named LogerAspect(){}
+````java
+package aspects;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggerAspects {
+    public void log
+}
+
+````
+
+On this class we use two annotations @Aspect and @Component.
+
+@Component (Stereotype Annotation) --> will convert this class into the spring bean. Whenever we want certain logic present 
+inside the class needs to act as Aspect logic, and we have to make sure that the clas is acting as a bean inside the 
+spring framework.
+
+@Aspect --> In order to differentiate between a normal bean and an Aspect bean , we need to mention this Annotation.
+![img.png](img.png)
+<br>
+With these two annotations, our class is ready to act as a Bean and a Aspect. We can write any number of methods
+in this class, that will hold the aspect logic. 
+
+##### Method Log inside our class. 
+This method will ave some aspect logic. **TODO: Have to describe this.**
+
+On the Top of this method we have to use the advice (before, around, after etc ). <br>
+Based upon the advice that we give on top of this aspect logic method, spring framework will intercept my actual method
+call, and will try to execute the log present inside this aspect methods. 
+
+In our case we have used @Around type of advice. 
+
+

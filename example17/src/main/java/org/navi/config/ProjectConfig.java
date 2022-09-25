@@ -2,10 +2,7 @@ package org.navi.config;
 
 import org.navi.beans.Person;
 import org.navi.beans.Vehicle;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 
 /*
 Spring @Configuration annotation is part of the spring core framework.
@@ -20,6 +17,7 @@ configuration class.
 @Configuration
 @ComponentScan(basePackages = {"org.navi.implementations", "org.navi.service"})
 @ComponentScan(basePackageClasses = {org.navi.beans.Vehicle.class, org.navi.beans.Person.class})
+@EnableAspectJAutoProxy
 public class ProjectConfig {
 
 }
