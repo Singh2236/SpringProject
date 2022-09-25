@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
+    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="without AOP">
+      <change afterPath="$PROJECT_DIR$/example17_A/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/aspects/LoggerAspects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/BoseSpeakers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/BridgeStoneTyres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/MichelinTyres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/SonySpeakers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/interfaces/Speakers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/interfaces/Tyres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/main/Example17_A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/model/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/service/VehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example17.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example17.java" afterDir="false" />
+    </list>
     <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Aspect Oriented Programming (AOP) inside Spring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,27 +68,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/navka/IdeaProjects/SpringProject/example17&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2505747&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;5de46d9bd75a534350fdf2c51c70687c&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2505747",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "5de46d9bd75a534350fdf2c51c70687c"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\navka\IdeaProjects\SpringProject\example17" />
       <recent name="C:\Users\navka\IdeaProjects\SpringProject" />
+      <recent name="C:\Users\navka\IdeaProjects\SpringProject\example17" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example1" />
@@ -170,7 +191,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="9634000" />
+      <workItem from="1664093100750" duration="10647000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -508,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664136047666</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="without AOP">
+      <created>1664136377868</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1664136377868</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Primary Annotation" />
     <MESSAGE value="Bean creation using @Component Annotation" />
     <MESSAGE value="PostConstruct &amp; PreDestroy Annotations" />
     <MESSAGE value="System Files" />
@@ -552,7 +579,8 @@
     <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring" />
     <MESSAGE value="Without AOP" />
     <MESSAGE value="system" />
-    <option name="LAST_COMMIT_MESSAGE" value="system" />
+    <MESSAGE value="without AOP" />
+    <option name="LAST_COMMIT_MESSAGE" value="without AOP" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
