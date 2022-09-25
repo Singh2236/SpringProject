@@ -12,7 +12,7 @@ public class Example17 {
         Person person = context.getBean(Person.class);
         VehicleService vehicleService = context.getBean(VehicleService.class);
 
-        System.out.println(vehicleService.getClass());   //Todo: Ponder on getClass() method.
+        System.out.println(vehicleService.getClass());   // // For now the data type of this class is just the bean above but in AOP it will be some proxy class
 
         Song song  = new Song();
         song.setTitle("Black to Black");

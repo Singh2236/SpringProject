@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example17.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example17/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/aspects/LoggerAspects.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/aspects/LoggerAspects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/BoseSpeakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/BoseSpeakers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/BridgeStoneTyres.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/BridgeStoneTyres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/MichelinTyres.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/MichelinTyres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/SonySpeakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/SonySpeakers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/interfaces/Speakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/interfaces/Speakers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/interfaces/Tyres.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/interfaces/Tyres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example14.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/service/VehicleService.java" afterDir="false" />
-    </list>
+    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
     <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Aspect Oriented Programming (AOP) inside Spring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +170,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="9297000" />
+      <workItem from="1664093100750" duration="9634000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -508,7 +494,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664095081091</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Without AOP">
+      <created>1664136033481</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1664136033481</updated>
+    </task>
+    <task id="LOCAL-00048" summary="system">
+      <created>1664136047666</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1664136047666</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +527,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Adding new beans to the Spring context" />
     <MESSAGE value="Primary Annotation" />
     <MESSAGE value="Bean creation using @Component Annotation" />
     <MESSAGE value="PostConstruct &amp; PreDestroy Annotations" />
@@ -551,6 +550,7 @@
     <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring.1" />
     <MESSAGE value="&#10;Prototype Bean Scope inside Spring" />
     <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring" />
+    <MESSAGE value="Without AOP" />
     <MESSAGE value="system" />
     <option name="LAST_COMMIT_MESSAGE" value="system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
