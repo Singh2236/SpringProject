@@ -1,6 +1,7 @@
 package org.navi.implementations;
 
 import org.navi.interfaces.Speakers;
+import org.navi.model.Song;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,7 +13,7 @@ public class SonySpeakers implements Speakers {
     }
 
     @Override
-    public String makeSound() {
-        return "Sony Speakers are making sound";
+    public String makeSound(Song song) {
+        return "Playing: " + song.getTitle() + " by " + song.getSingerName();
     }
 }

@@ -1,6 +1,7 @@
 package org.navi.implementations;
 
 import org.navi.interfaces.Speakers;
+import org.navi.model.Song;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +17,8 @@ public class BoseSpeakers implements Speakers {
 
 
     @Override
-    public String makeSound() {
-        return "Bose Speakers are making sound";
+    public String makeSound(Song song) {
+        return "Playing " + song.getTitle() + " by " + song.getSingerName();
     }
+
 }

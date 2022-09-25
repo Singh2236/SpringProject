@@ -19,4 +19,9 @@ public class BridgeStoneTyres implements Tyres {
         return "BridgeStoneTyres are rotating";
     }
 
+    @Override
+    public String stop() {
+        return "Vehicle has stopped moving with BridgeStoneTyres";
+    }
+
 }
