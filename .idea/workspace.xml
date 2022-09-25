@@ -4,26 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deb2046c-d019-4f6a-9314-f2343da94db5" name="SystemFiles" comment="system">
-      <change afterPath="$PROJECT_DIR$/example17/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/BoseSpeakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/BridgeStoneTyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/MichelinTyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/implementations/SonySpeakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/interfaces/Speakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/interfaces/Tyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example14.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/service/VehicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
+      <change afterPath="$PROJECT_DIR$/example17/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/aspects/LoggerAspects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example16/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example16/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example17/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example17/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
     </list>
-    <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Prototype Bean Scope" />
+    <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="&#10;Prototype Bean Scope inside Spring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +167,8 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="" />
-      <changelist id="deb2046c-d019-4f6a-9314-f2343da94db5" name="SystemFiles" comment="These Files are always modified and interrupting in naming the commits for the GitHub presentation. So, for the sake of simplifying the code presentation, i will commit and push these files at the last to the GitHub. " />
+      <changelist id="" name="SystemFiles" comment="These Files are always modified and interrupting in naming the commits for the GitHub presentation. So, for the sake of simplifying the code presentation, i will commit and push these files at the last to the GitHub. " />
+      <changelist id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
       <created>1663494321021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -187,7 +177,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="301000" />
+      <workItem from="1664093100750" duration="1907000" />
     </task>
     <task id="LOCAL-00001" summary="working model of context awareness">
       <created>1663502181904</created>
@@ -476,7 +466,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663861802763</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Aspect Oriented Programming (AOP) inside Spring.1">
+      <created>1664093454236</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1664093454236</updated>
+    </task>
+    <task id="LOCAL-00043" summary="&#10;Prototype Bean Scope inside Spring">
+      <created>1664093472956</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1664093472956</updated>
+    </task>
+    <task id="LOCAL-00044" summary="system">
+      <created>1664093518524</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1664093518524</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +506,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="working model of context awareness" />
     <MESSAGE value="README.md" />
     <MESSAGE value="Adding new beans to the Spring context" />
     <MESSAGE value="Primary Annotation" />
@@ -518,6 +528,8 @@
     <MESSAGE value="Singleton Bean Scope inside Spring" />
     <MESSAGE value="Eager and Lazy Instantiation" />
     <MESSAGE value="Prototype Bean Scope" />
+    <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring.1" />
+    <MESSAGE value="&#10;Prototype Bean Scope inside Spring" />
     <MESSAGE value="system" />
     <option name="LAST_COMMIT_MESSAGE" value="system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
