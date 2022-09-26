@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
-      <change afterPath="$PROJECT_DIR$/Example_18/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_18/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_18/src/main/java/com/navi/modelSchool/controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/java/com/navi/modelSchool/SchoolWebsite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/resources/static/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18A/src/test/java/com/navi/modelSchool/Example18ApplicationTests.java" afterDir="false" />
     </list>
-    <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Aspect Oriented Programming (AOP) inside Spring" />
+    <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Spring Starter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,21 +117,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="16898000" />
-    </task>
-    <task id="LOCAL-00007" summary="Different ways to Name a Bean">
-      <created>1663508666820</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1663508666820</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Adding new beans to the Spring context">
-      <created>1663508723721</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1663508723721</updated>
+      <workItem from="1664093100750" duration="17223000" />
     </task>
     <task id="LOCAL-00009" summary="Primary Annotation">
       <created>1663509658333</created>
@@ -452,7 +448,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664208584207</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Spring Starter">
+      <created>1664209964370</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1664209964370</updated>
+    </task>
+    <task id="LOCAL-00057" summary="system">
+      <created>1664209969739</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1664209969739</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,8 +503,8 @@
     <MESSAGE value="Without AOP" />
     <MESSAGE value="without AOP" />
     <MESSAGE value="AOP" />
-    <MESSAGE value="Spring Starter" />
     <MESSAGE value="Aop" />
+    <MESSAGE value="Spring Starter" />
     <MESSAGE value="system" />
     <option name="LAST_COMMIT_MESSAGE" value="system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
