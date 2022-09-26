@@ -18,7 +18,7 @@ public class Example17_A {
         song.setTitle("Black to Black");
         song.setSingerName("Amy");
 
-        Boolean vehicleStarted = false;
+        Boolean vehicleStarted = true;
 
         System.out.println(person.getVehicle().getVehicleService().playMusic(vehicleStarted,song));
 

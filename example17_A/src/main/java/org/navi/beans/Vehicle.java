@@ -11,6 +11,7 @@ public class Vehicle {
 
     @Autowired
     public Vehicle(VehicleService vehicleService) {
+        System.out.println("Vehicle bean --->--->-->--->--->");
         this.vehicleService = vehicleService;
     }
 

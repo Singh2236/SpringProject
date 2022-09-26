@@ -7,17 +7,14 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("person") //personBean1 of Person with dependency on VehicleBean1
-@Lazy
+@Component
 public class Person {
     String name = "Lucy";
-
-    /*@Autowired*/
     private Vehicle vehicle;
 
-    @Autowired // Autowired at constructor // Person Bean has dependency on Vehicle
+    @Autowired
     public Person(Vehicle vehicle1) {
-        //System.out.println("Person created by Spring");
+        System.out.println("person bean -->----->----->--->");
         this.vehicle = vehicle1;
     }
 
@@ -25,16 +22,7 @@ public class Person {
         return name;
     }
 
-
-    /*public void setName(String name) {
-        this.name = name;
-    }*/
-
     public Vehicle getVehicle() {
         return vehicle;
     }
-    /*@Autowired*/
-    /*public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
-    }*/
 }

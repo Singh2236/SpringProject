@@ -42,7 +42,7 @@ public class VehicleService {
 
 
     public String playMusic(Boolean vehicleStarted, Song song) {
-        Instant start = Instant.now();
+        /*Instant start = Instant.now();
         logger.info("EXECUTION OF METHOD STARTED");
         String music = null;
         if (vehicleStarted) {
@@ -50,16 +50,17 @@ public class VehicleService {
         } else {
             logger.log(Level.SEVERE, "Vehicle not started to perform the operation");
         }
-        logger.info("Method execution ended.");
+       logger.info("Method execution ended.");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
         logger.info("Time took to execute the method " + timeElapsed);
-        return music;
+        return music;*/
+        return speakers.makeSound(song);
 
     }
 
     public String moveVehicle(Boolean vehicleStarted) {
-        Instant start = Instant.now();
+        /*Instant start = Instant.now();
         logger.info("EXECUTION OF METHOD STARTED");
         String status = null;
         if (vehicleStarted) {
@@ -71,11 +72,12 @@ public class VehicleService {
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
         logger.info("Time took to execute the method " + timeElapsed);
-        return status;
+        return status;*/
+        return tyres.rotate();
     }
 
     public String applyBreaks(Boolean vehicleStarted) {
-        Instant start = Instant.now();
+        /*Instant start = Instant.now();
         logger.info("EXECUTION OF METHOD STARTED");
         String status = null;
         if (vehicleStarted) {
@@ -87,7 +89,8 @@ public class VehicleService {
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
         logger.info("Time took to execute the method " + timeElapsed);
-        return status;
+        return status;*/
+        return tyres.stop();
     }
 
 

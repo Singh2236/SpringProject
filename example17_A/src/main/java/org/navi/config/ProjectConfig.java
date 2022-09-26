@@ -15,7 +15,7 @@ with stereotype annotations, we use the @ComponentScan annotation over the
 configuration class.
 * */
 @Configuration
-@ComponentScan(basePackages = {"org.navi.implementations", "org.navi.service", "org.navi.aspects"})
+@ComponentScan(basePackages = {"org.navi.implementations", "org.navi.service", "org.navi.aspects", "org.navi.beans"})
 @EnableAspectJAutoProxy
 public class ProjectConfig {
 
