@@ -1,6 +1,6 @@
 # SpringProject
 
-# What i have shown in this repository -
+# What i have learned through this project -
 
 1. What is Spring framework ?
 
