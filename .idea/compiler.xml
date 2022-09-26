@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Example_18" />
         <module name="example15" />
         <module name="example16" />
         <module name="example13" />
@@ -30,5 +31,10 @@
       <module name="example15 (1)" target="17" />
       <module name="example2 (1)" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Example_18" options="-parameters" />
+    </option>
   </component>
 </project>

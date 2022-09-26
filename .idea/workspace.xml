@@ -4,27 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="without AOP">
-      <change afterPath="$PROJECT_DIR$/example17_A/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/aspects/LoggerAspects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/BoseSpeakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/BridgeStoneTyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/MichelinTyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/implementations/SonySpeakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/interfaces/Speakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/interfaces/Tyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/main/Example17_A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/model/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/service/VehicleService.java" afterDir="false" />
+    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/src/main/java/com/navi/Example_18/SchoolWebsite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/src/main/resources/static/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_18/src/test/java/com/navi/Example_18/Example18ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/aspects/VehicleStartCheckAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example17.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17/src/main/java/org/navi/main/Example17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/aspects/LoggerAspects.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/aspects/LoggerAspects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/beans/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/config/ProjectConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/main/Example17_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/main/Example17_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/src/main/java/org/navi/service/VehicleService.java" afterDir="false" />
     </list>
     <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Aspect Oriented Programming (AOP) inside Spring" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +46,7 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -71,6 +74,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -93,8 +97,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example1" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.navi.aspects" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Example17">
+  <component name="RunManager" selected="Application.Example17_A">
     <configuration name="Example14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.navi.main.Example14" />
       <module name="example17" />
@@ -121,9 +128,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.navi.main.Example11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example11" />
-      <module name="example11" />
+    <configuration name="Example17_A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.navi.main.Example17_A" />
+      <module name="example17_A" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.navi.main.*" />
@@ -160,20 +167,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Example18Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Example_18" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.navi.modelSchool.SchoolWebsite" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Example14" />
       <item itemvalue="Application.Example17" />
-      <item itemvalue="Application.org.navi.main.Example11" />
+      <item itemvalue="Application.Example17_A" />
       <item itemvalue="Application.org.navi.main.Example12" />
       <item itemvalue="Application.org.navi.main.Example13" />
+      <item itemvalue="Spring Boot.Example18Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example17_A" />
         <item itemvalue="Application.Example17" />
         <item itemvalue="Application.Example14" />
         <item itemvalue="Application.org.navi.main.Example13" />
         <item itemvalue="Application.org.navi.main.Example12" />
-        <item itemvalue="Application.org.navi.main.Example11" />
       </list>
     </recent_temporary>
   </component>
@@ -191,28 +206,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="10647000" />
-    </task>
-    <task id="LOCAL-00001" summary="working model of context awareness">
-      <created>1663502181904</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663502181904</updated>
-    </task>
-    <task id="LOCAL-00002" summary="README.md">
-      <created>1663502892993</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1663502892993</updated>
-    </task>
-    <task id="LOCAL-00003" summary="README.md">
-      <created>1663502988539</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1663502988539</updated>
+      <workItem from="1664093100750" duration="15371000" />
     </task>
     <task id="LOCAL-00004" summary="Adding new beans to the Spring context">
       <created>1663503105398</created>
@@ -536,7 +530,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664136377868</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="without AOP">
+      <created>1664137481882</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1664137481883</updated>
+    </task>
+    <task id="LOCAL-00051" summary="AOP">
+      <created>1664137609262</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1664137609262</updated>
+    </task>
+    <task id="LOCAL-00052" summary="system">
+      <created>1664137638650</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1664137638650</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +570,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Bean creation using @Component Annotation" />
     <MESSAGE value="PostConstruct &amp; PreDestroy Annotations" />
     <MESSAGE value="System Files" />
     <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
@@ -578,9 +592,10 @@
     <MESSAGE value="&#10;Prototype Bean Scope inside Spring" />
     <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring" />
     <MESSAGE value="Without AOP" />
-    <MESSAGE value="system" />
     <MESSAGE value="without AOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="without AOP" />
+    <MESSAGE value="AOP" />
+    <MESSAGE value="system" />
+    <option name="LAST_COMMIT_MESSAGE" value="system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
