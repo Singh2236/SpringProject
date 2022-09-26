@@ -4,17 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="Hello World Web App using SpringBoot &amp; Spring MVC">
-      <change afterPath="$PROJECT_DIR$/Example_18A/img_2.png" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Thymeleaf">
+      <change beforePath="$PROJECT_DIR$/Example_18/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_18A/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_19/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example10/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example10/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example11/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example11/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example12/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example12/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example13/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example13/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example14/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example14/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example15/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example15/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example16/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example16/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example17/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example17_A/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example3/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example4/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example5/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example6/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example6/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example7/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example7/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example8/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example8/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example9/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example9/pom.xml" afterDir="false" />
+    </list>
+    <list id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_18A/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_18A/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_18A/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_19/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_19/src/main/java/com/navi/modelSchool/controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_19/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_19/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/src/main/resources/templates/home.html" afterDir="false" />
     </list>
-    <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Spring Starter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +83,10 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -81,6 +107,7 @@
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example17" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\navka\IdeaProjects\SpringProject\Example_19\src\main\resources\templates" />
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example1" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -94,10 +121,17 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SchoolWebsite">
+  <component name="RunManager" selected="Spring Boot.SchoolWebsite (1)">
     <configuration name="Example18Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="Example_18" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.navi.modelSchool.SchoolWebsite" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolWebsite (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Example_19" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.navi.modelSchool.SchoolWebsite" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,6 +146,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.SchoolWebsite (1)" />
       <item itemvalue="Spring Boot.SchoolWebsite" />
       <item itemvalue="Spring Boot.Example18Application" />
     </list>
@@ -130,49 +165,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="17920000" />
-    </task>
-    <task id="LOCAL-00010" summary="Bean creation using @Component Annotation">
-      <created>1663510290441</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1663510290441</updated>
-    </task>
-    <task id="LOCAL-00011" summary="PostConstruct &amp; PreDestroy Annotations">
-      <created>1663578209242</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1663578209242</updated>
-    </task>
-    <task id="LOCAL-00012" summary="PostConstruct &amp; PreDestroy Annotations">
-      <created>1663578285470</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1663578285470</updated>
-    </task>
-    <task id="LOCAL-00013" summary="System Files">
-      <created>1663579530872</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1663579530872</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Understanding &amp; Resolving NoUniqueBeanDefinitionException">
-      <created>1663579552666</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1663579552666</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Different ways to Name a Bean">
-      <created>1663579573237</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1663579573237</updated>
+      <workItem from="1664093100750" duration="27534000" />
     </task>
     <task id="LOCAL-00016" summary="@Primary Annotation">
       <created>1663579591535</created>
@@ -475,7 +468,49 @@
       <option name="project" value="LOCAL" />
       <updated>1664210259830</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Default configurations modifications">
+      <created>1664211011382</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1664211011383</updated>
+    </task>
+    <task id="LOCAL-00060" summary="system">
+      <created>1664211022528</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1664211022528</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Default configurations modifications">
+      <created>1664212219058</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1664212219058</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Default configurations modifications">
+      <created>1664213458527</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1664213458527</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Default configurations modifications">
+      <created>1664213639174</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1664213639174</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Thymeleaf">
+      <created>1664219248284</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1664219248284</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,8 +529,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Different ways to Name a Bean" />
-    <MESSAGE value="@Primary Annotation" />
     <MESSAGE value="Bean creation using @component Annotation" />
     <MESSAGE value="@PostConstruct and @PreDestroy in @Component" />
     <MESSAGE value="Programmatically registering the beans to the Spring Context." />
@@ -517,9 +550,11 @@
     <MESSAGE value="AOP" />
     <MESSAGE value="Aop" />
     <MESSAGE value="Spring Starter" />
-    <MESSAGE value="system" />
     <MESSAGE value="Hello World Web App using SpringBoot &amp; Spring MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hello World Web App using SpringBoot &amp; Spring MVC" />
+    <MESSAGE value="system" />
+    <MESSAGE value="Default configurations modifications" />
+    <MESSAGE value="Thymeleaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thymeleaf" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
