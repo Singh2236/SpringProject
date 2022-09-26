@@ -1,66 +1,67 @@
 # SpringProject
 
 # What i have shown in this repository -
-What is Spring framework ?
 
-1. Spring Vs Java EE
+1. What is Spring framework ?
 
-2. Evolution of Spring and release timeline of Spring
+2. Spring Vs Java EE
 
-3. Different projects inside Spring
+3. Evolution of Spring and release timeline of Spring
 
-4. Spring Core Concepts like Inversion of Control (IoC), Dependency Injection (DI) & Aspect-Oriented Programming (AOP)
+4. Different projects inside Spring
 
-5. Different approaches of Beans creation inside Spring framework
+5. Spring Core Concepts like Inversion of Control (IoC), Dependency Injection (DI) & Aspect-Oriented Programming (AOP)
 
-6. Bean Scopes inside Spring framework
+6. Different approaches of Beans creation inside Spring framework
 
-7. Autowiring of the Spring Beans
+7. Bean Scopes inside Spring framework
 
-Introduction to MVC pattern & overview of web apps
+8. Autowiring of the Spring Beans
 
-Spring MVC internal architecture & how to create web applications using Spring MVC & Thymeleaf
+9. Introduction to MVC pattern & overview of web apps
 
-Spring MVC Validations
+10. Spring MVC internal architecture & how to create web applications using Spring MVC & Thymeleaf
 
-How to build dynamic web apps using Thymeleaf & Spring
+11. Spring MVC Validations
 
-Thymeleaf integration with Spring, Spring MVC, Spring Security
+12. How to build dynamic web apps using Thymeleaf & Spring
 
-Deep dive on Spring Boot, Auto-configuration
+13. Thymeleaf integration with Spring, Spring MVC, Spring Security
 
-Spring Boot Dev Tools
+14. Deep dive on Spring Boot, Auto-configuration
 
-Spring Boot H2 Database
+15. Spring Boot Dev Tools
 
-Securing web applications using Spring Security
+16. Spring Boot H2 Database
 
-Authentication , Authorization, Role based access
+17. Securing web applications using Spring Security
 
-Cross-Site Request Forgery (CSRF) & Cross-Origin Resource Sharing (CORS)
+18. Authentication , Authorization, Role based access
 
-Database create, read, update, delete operations using Spring JDBC
+19. Cross-Site Request Forgery (CSRF) & Cross-Origin Resource Sharing (CORS)
 
-Introduction to ORM frameworks & database create, read, update, delete operations using Spring Data JPA/Hibernate
+20. Database create, read, update, delete operations using Spring JDBC
 
-Derived Query methods in JPA
+21. Introduction to ORM frameworks & database create, read, update, delete operations using Spring Data JPA/Hibernate
 
-OneToOne, OneToMany, ManyToOne, ManyToMany mappings inside JPA/Hibernate
+22. Derived Query methods in JPA
 
-Sorting, Pagination, JPQL inside Spring Data JPA
+23. OneToOne, OneToMany, ManyToOne, ManyToMany mappings inside JPA/Hibernate
 
-Building Rest Services inside Spring
+24. Sorting, Pagination, JPQL inside Spring Data JPA
 
-Consuming Rest Services using OpenFeign, Web Client, RestTemplate
+25. Building Rest Services inside Spring
 
-Spring Data Rest & HAL Explorer
+26. Consuming Rest Services using OpenFeign, Web Client, RestTemplate
 
-Logging inside Spring applications
+27. Spring Data Rest & HAL Explorer
 
-Properties Configuration inside Spring applications
+28. Logging inside Spring applications
 
-Profiles inside Spring Boot applications
+29. Properties Configuration inside Spring applications
 
-Conditional Bean creation using Profiles
+30. Profiles inside Spring Boot applications
 
-Monitoring Spring Boot applications using SpringBoot Actuator & Spring Boot Admin
+31. Conditional Bean creation using Profiles
+
+32. Monitoring Spring Boot applications using SpringBoot Actuator & Spring Boot Admin
