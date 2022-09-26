@@ -11,11 +11,11 @@ What is Spring framework ?
 
 4. Spring Core Concepts like Inversion of Control (IoC), Dependency Injection (DI) & Aspect-Oriented Programming (AOP)
 
-Different approaches of Beans creation inside Spring framework
+5. Different approaches of Beans creation inside Spring framework
 
-Bean Scopes inside Spring framework
+6. Bean Scopes inside Spring framework
 
-Autowiring of the Spring Beans
+7. Autowiring of the Spring Beans
 
 Introduction to MVC pattern & overview of web apps
 
