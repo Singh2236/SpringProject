@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
-      <change afterPath="$PROJECT_DIR$/Example_18A/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/java/com/navi/modelSchool/SchoolWebsite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/src/main/resources/static/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_18A/src/test/java/com/navi/modelSchool/Example18ApplicationTests.java" afterDir="false" />
+    <list default="true" id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="Hello World Web App using SpringBoot &amp; Spring MVC">
+      <change afterPath="$PROJECT_DIR$/Example_18A/img_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_18A/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_18A/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example_18A/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/src/main/resources/application.properties" afterDir="false" />
     </list>
     <list id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Spring Starter" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +87,14 @@
       <recent name="org.navi.aspects" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SchoolWebsite">
     <configuration name="Example18Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="Example_18" />
@@ -102,6 +103,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SchoolWebsite" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="Example_18A" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.navi.modelSchool.SchoolWebsite" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SchoolWebsite" />
+      <item itemvalue="Spring Boot.Example18Application" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,14 +130,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="17223000" />
-    </task>
-    <task id="LOCAL-00009" summary="Primary Annotation">
-      <created>1663509658333</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1663509658333</updated>
+      <workItem from="1664093100750" duration="17920000" />
     </task>
     <task id="LOCAL-00010" summary="Bean creation using @Component Annotation">
       <created>1663510290441</created>
@@ -462,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664209969739</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Hello World Web App using SpringBoot &amp; Spring MVC">
+      <created>1664210259830</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1664210259830</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +494,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
     <MESSAGE value="Different ways to Name a Bean" />
     <MESSAGE value="@Primary Annotation" />
     <MESSAGE value="Bean creation using @component Annotation" />
@@ -506,7 +518,8 @@
     <MESSAGE value="Aop" />
     <MESSAGE value="Spring Starter" />
     <MESSAGE value="system" />
-    <option name="LAST_COMMIT_MESSAGE" value="system" />
+    <MESSAGE value="Hello World Web App using SpringBoot &amp; Spring MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hello World Web App using SpringBoot &amp; Spring MVC" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
