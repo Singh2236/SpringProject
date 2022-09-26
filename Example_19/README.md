@@ -41,12 +41,43 @@ Model is an interface inside Spring MVC Framework, which act as a container betw
 we used to do it with the help of `ServletRequest` and `ServletResponse`)
 
 ````java
+
 @Controller
 public class homeController {
-    @RequestMapping({"","/","/home"})
-    public String displayHome(Model model){
+    @RequestMapping({"", "/", "/home"})
+    public String displayHome(Model model) {
         model.addAttribute("username", "Navi");
         return "home.html";
     }
 }
 ````
+
+# Disabling thymeleaf caching
+
+Normally, Thymeleaf cache the dynamic code inside the html file and save it, and shows the same code in the browser. On
+modifications in the code we have to restart the server to get the updated code. But on disabling it we don't have
+restarted the server and just with the build of code, we can get the updated values.
+To do so, just add the following property to application.properties file.
+
+````
+spring.thymeleaf.cache=false
+````
+
+# Dev Tools
+
+With dev tools we do not need to refresh the web browser, and all the changes can be updated in the browser as well.
+It is really great for developers. These tools can only be leveraged, when we are making an application with spring
+boot. Just with Spring and Spring MVC, dev Tools don't work. Just add dependencies and it's fun to go.
+Provided features -
+
+1. Automatic Restart
+2. Live reload
+
+### How DevTools works
+
+1. DevTools maintain 2 class loaders. One with classes that doesn't change and other with classes that change. When
+   restart is need it only reloads the second class loader, which makes the class restart faster as well.
+2. DevTools includes an embedded LiveReload server that can be used to trigger a browser refresh when a resource is
+   changed. Live Reloader extensions are available for most of the browsers.
+3. DevTools trigger a restart, whenever a restart is triggered through IDE or by Maven commands. DevTools disable the
+   caching options by default during development. Repacked archives do not contain DevTools by default. 
