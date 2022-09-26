@@ -4,39 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Thymeleaf">
-      <change beforePath="$PROJECT_DIR$/Example_18/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_18A/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_18A/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_19/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example10/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example10/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example11/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example11/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example12/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example12/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example13/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example13/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example14/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example14/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example15/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example15/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example16/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example16/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example17/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example17_A/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example17_A/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example5/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example6/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example6/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example7/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example7/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example8/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example8/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example9/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example9/pom.xml" afterDir="false" />
-    </list>
-    <list id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_19/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_19/src/main/java/com/navi/modelSchool/controller/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_19/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_19/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Example_19/src/main/resources/templates/home.html" afterDir="false" />
-    </list>
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Thymeleaf" />
+    <list id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +29,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -165,21 +135,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="27534000" />
-    </task>
-    <task id="LOCAL-00016" summary="@Primary Annotation">
-      <created>1663579591535</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1663579591535</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Bean creation using @component Annotation">
-      <created>1663579605289</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1663579605289</updated>
+      <workItem from="1664093100750" duration="27956000" />
     </task>
     <task id="LOCAL-00018" summary="system">
       <created>1663579620076</created>
@@ -510,7 +466,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664219248284</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Hello World Web App using Thymeleaf &amp; DevTools Demo">
+      <created>1664223095301</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1664223095302</updated>
+    </task>
+    <task id="LOCAL-00066" summary="system">
+      <created>1664223111087</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1664223111087</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +499,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Bean creation using @component Annotation" />
     <MESSAGE value="@PostConstruct and @PreDestroy in @Component" />
     <MESSAGE value="Programmatically registering the beans to the Spring Context." />
     <MESSAGE value="Adding new beans using XMl Configurations" />
@@ -551,10 +520,11 @@
     <MESSAGE value="Aop" />
     <MESSAGE value="Spring Starter" />
     <MESSAGE value="Hello World Web App using SpringBoot &amp; Spring MVC" />
-    <MESSAGE value="system" />
     <MESSAGE value="Default configurations modifications" />
     <MESSAGE value="Thymeleaf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thymeleaf" />
+    <MESSAGE value="Hello World Web App using Thymeleaf &amp; DevTools Demo" />
+    <MESSAGE value="system" />
+    <option name="LAST_COMMIT_MESSAGE" value="system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
