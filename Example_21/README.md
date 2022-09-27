@@ -83,7 +83,21 @@ Provided features -
    caching options by default during development. Repacked archives do not contain DevTools by default. 
 
 
-### Adding Thymeleaf links
+### Adding Thymeleaf links to all the home buttons 
 ````thymeleafexpressions
 th:href="@{/home}"
 ````
+
+### Upgrading Controller class logic in Configurations file 
+Whenever we have a scenario, where we have to manage many kinds of Mappings, we use kind of class below.
+
+```java
+@Configuration
+public class webConfig implements WebMvcConfigurer {
+   @Override
+   public void addViewControllers(ViewControllerRegistry registry) {
+      registry.addViewController("/courses").setViewName("courses"); //Url pattern and file name, don't need to put .html extension
+
+   }
+}
+```
