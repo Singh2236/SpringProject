@@ -4,72 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="system">
-      <change afterPath="$PROJECT_DIR$/Example_20/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/java/com/navi/modelSchool/SchoolWebsite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/css/style-starter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/bg3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/blog1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/blog2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/blog3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/c1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/c2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/c3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/c4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/c5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/c6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/icon-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/icon-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/icon-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/icon-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/team1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/team2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/team3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/team4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/testi1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/testi2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/images/testi3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/js/counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/js/theme-change.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/static/assets/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/templates/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/templates/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Example_20/src/test/java/com/navi/modelSchool/Example20ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Eager &amp; Lazy instantiation of Singleton beans">
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/beans/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/beans/Vehicle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/config/ProjectConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/BoseSpeakers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/BridgeStoneTyres.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/MichelinTyres.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/SonySpeakers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/interfaces/Speakers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/interfaces/Tyres.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/main/Example14.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/service/VehicleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
@@ -183,126 +129,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="30304000" />
-    </task>
-    <task id="LOCAL-00020" summary="Programmatically registering the beans to the Spring Context.">
-      <created>1663585233353</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1663585233353</updated>
-    </task>
-    <task id="LOCAL-00021" summary="system">
-      <created>1663585412293</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1663585412293</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Adding new beans using XMl Configurations">
-      <created>1663586367022</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1663586367022</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Adding new beans using XMl Configurations">
-      <created>1663587674476</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1663587674476</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Adding new beans using Method Calls">
-      <created>1663671329436</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1663671329436</updated>
-    </task>
-    <task id="LOCAL-00025" summary="system">
-      <created>1663671358128</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1663671358128</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Adding new beans using Method Calls">
-      <created>1663672178095</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1663672178095</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Wiring Beans using method parameters">
-      <created>1663673130717</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1663673130717</updated>
-    </task>
-    <task id="LOCAL-00028" summary="system">
-      <created>1663673141960</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1663673141960</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Injecting Beans using @Autowired on class fields">
-      <created>1663679341974</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1663679341974</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Injecting Beans using Autowired Annotation on Class Fields, SetterMethod() and on Constructor">
-      <created>1663685293947</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1663685293947</updated>
-    </task>
-    <task id="LOCAL-00031" summary="system">
-      <created>1663685324047</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1663685324047</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Autowiring multiple beans of the same type">
-      <created>1663705520399</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1663705520399</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Autowiring multiple beans of the same type">
-      <created>1663705894414</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1663705894414</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Assignment related to Beans, Autowiring, DI">
-      <created>1663860439895</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1663860439895</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Singleton Bean Scope inside Spring">
-      <created>1663860991566</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1663860991566</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Assignment related to Beans, Autowiring, DI">
-      <created>1663861129433</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1663861129433</updated>
+      <workItem from="1664093100750" duration="31270000" />
     </task>
     <task id="LOCAL-00037" summary="system">
       <created>1663861236386</created>
@@ -528,7 +355,126 @@
       <option name="project" value="LOCAL" />
       <updated>1664223710160</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Build EazySchool HomePage">
+      <created>1664237256149</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237256149</updated>
+    </task>
+    <task id="LOCAL-00070" summary="system">
+      <created>1664237317441</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237317441</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Adding new beans to the Spring context">
+      <created>1664237602162</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237602162</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Understanding &amp; Resolving NoUniqueBeanDefinitionException">
+      <created>1664237633306</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237633306</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Different ways to name a Bean">
+      <created>1664237647980</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237647980</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Primary Annotation">
+      <created>1664237661637</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237661637</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Bean creation using Component Annotation">
+      <created>1664237677563</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237677563</updated>
+    </task>
+    <task id="LOCAL-00076" summary="PostConstruct &amp; PreDestroy Annotations">
+      <created>1664237706227</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237706227</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Programmatically adding beans to the Spring context">
+      <created>1664237745002</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237745002</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Adding new Beans using XML Configurations">
+      <created>1664237758516</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237758516</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Wiring Beans using method call">
+      <created>1664237773183</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237773183</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Wiring Beans using method parameters">
+      <created>1664237786776</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237786776</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Injecting Beans using Autowired Annotation">
+      <created>1664237818369</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237818369</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Types of Autowiring &amp; Qualifier Annotation">
+      <created>1664237835806</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237835806</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Assignment related to Beans, Autowiring, DI">
+      <created>1664237854990</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237854990</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Singleton Bean Scope inside Spring">
+      <created>1664237870489</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237870489</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Eager &amp; Lazy instantiation of Singleton beans">
+      <created>1664237893775</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237893775</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,22 +493,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="@PostConstruct and @PreDestroy in @Component" />
-    <MESSAGE value="Programmatically registering the beans to the Spring Context." />
-    <MESSAGE value="Adding new beans using XMl Configurations" />
-    <MESSAGE value="Adding new beans using Method Calls" />
-    <MESSAGE value="Wiring Beans using method parameters" />
-    <MESSAGE value="Injecting Beans using @Autowired on class fields" />
-    <MESSAGE value="Injecting Beans using Autowired Annotation on Class Fields, SetterMethod() and on Constructor" />
-    <MESSAGE value="Autowiring multiple beans of the same type" />
-    <MESSAGE value="Assignment related to Beans, Autowiring, DI" />
-    <MESSAGE value="Singleton Bean Scope inside Spring" />
-    <MESSAGE value="Eager and Lazy Instantiation" />
-    <MESSAGE value="Prototype Bean Scope" />
-    <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring.1" />
-    <MESSAGE value="&#10;Prototype Bean Scope inside Spring" />
-    <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring" />
-    <MESSAGE value="Without AOP" />
     <MESSAGE value="without AOP" />
     <MESSAGE value="AOP" />
     <MESSAGE value="Aop" />
@@ -571,8 +501,24 @@
     <MESSAGE value="Default configurations modifications" />
     <MESSAGE value="Thymeleaf" />
     <MESSAGE value="Hello World Web App using Thymeleaf &amp; DevTools Demo" />
+    <MESSAGE value="Build EazySchool HomePage" />
     <MESSAGE value="system" />
-    <option name="LAST_COMMIT_MESSAGE" value="system" />
+    <MESSAGE value="Adding new beans to the Spring context" />
+    <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
+    <MESSAGE value="Different ways to name a Bean" />
+    <MESSAGE value="Primary Annotation" />
+    <MESSAGE value="Bean creation using Component Annotation" />
+    <MESSAGE value="PostConstruct &amp; PreDestroy Annotations" />
+    <MESSAGE value="Programmatically adding beans to the Spring context" />
+    <MESSAGE value="Adding new Beans using XML Configurations" />
+    <MESSAGE value="Wiring Beans using method call" />
+    <MESSAGE value="Wiring Beans using method parameters" />
+    <MESSAGE value="Injecting Beans using Autowired Annotation" />
+    <MESSAGE value="Types of Autowiring &amp; Qualifier Annotation" />
+    <MESSAGE value="Assignment related to Beans, Autowiring, DI" />
+    <MESSAGE value="Singleton Bean Scope inside Spring" />
+    <MESSAGE value="Eager &amp; Lazy instantiation of Singleton beans" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eager &amp; Lazy instantiation of Singleton beans" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
