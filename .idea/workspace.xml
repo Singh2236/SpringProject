@@ -4,21 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="Eager &amp; Lazy instantiation of Singleton beans">
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/beans/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/beans/Vehicle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/config/ProjectConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/BoseSpeakers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/BridgeStoneTyres.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/MichelinTyres.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/implementations/SonySpeakers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/interfaces/Speakers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/interfaces/Tyres.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/main/Example14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example15/target/classes/org/navi/service/VehicleService.class" afterDir="false" />
+    <list default="true" id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Example_21/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/java/com/navi/modelSchool/SchoolWebsite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/java/com/navi/modelSchool/controller/homeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/css/style-starter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/blog1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/blog2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/blog3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/c5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/c6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/icon-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/icon-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/team1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/team2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/team3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/team4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/testi1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/testi2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/images/testi3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/js/counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/js/theme-change.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/static/assets/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Example_21/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <list id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,9 +124,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject/Example_20/src/main/resources/static",
+    "last_opened_file_path": "C:/Users/navka/IdeaProjects/SpringProject",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -85,9 +138,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\navka\IdeaProjects\SpringProject" />
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\Example_20\src\main\resources\static" />
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\Example_20\src\main\resources\templates" />
-      <recent name="C:\Users\navka\IdeaProjects\SpringProject" />
       <recent name="C:\Users\navka\IdeaProjects\SpringProject\example17" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -106,9 +159,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="SchoolWebsite" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SchoolWebsite " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
-      <module name="Example_20" />
+      <module name="Example_21" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.navi.modelSchool.SchoolWebsite" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,7 +173,7 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="9b7046c7-305e-457f-9004-5f52a5466f8a" name="Changes" comment="" />
       <changelist id="" name="SystemFiles" comment="These Files are always modified and interrupting in naming the commits for the GitHub presentation. So, for the sake of simplifying the code presentation, i will commit and push these files at the last to the GitHub. " />
-      <changelist id="765053ec-17bb-41a8-bc13-ef785a2cf72f" name="system" comment="system" />
+      <changelist id="" name="system" comment="system" />
       <created>1663494321021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -129,35 +182,7 @@
       <workItem from="1663853845919" duration="8143000" />
       <workItem from="1664041976745" duration="566000" />
       <workItem from="1664093017515" duration="69000" />
-      <workItem from="1664093100750" duration="31270000" />
-    </task>
-    <task id="LOCAL-00037" summary="system">
-      <created>1663861236386</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1663861236386</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Singleton Bean Scope inside Spring">
-      <created>1663861306336</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1663861306336</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Eager and Lazy Instantiation">
-      <created>1663861581757</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1663861581757</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Prototype Bean Scope">
-      <created>1663861792252</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1663861792252</updated>
+      <workItem from="1664093100750" duration="34375000" />
     </task>
     <task id="LOCAL-00041" summary="system">
       <created>1663861802763</created>
@@ -474,7 +499,35 @@
       <option name="project" value="LOCAL" />
       <updated>1664237893775</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Prototype Bean Scope inside Spring">
+      <created>1664237908120</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237908120</updated>
+    </task>
+    <task id="LOCAL-00087" summary="&#10;Ohne : Aspect Oriented Programming (AOP) inside Spring">
+      <created>1664237931074</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237931074</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Aspect Oriented Programming (AOP) inside Spring">
+      <created>1664237949272</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237949272</updated>
+    </task>
+    <task id="LOCAL-00089" summary="system">
+      <created>1664237963907</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1664237963907</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,16 +546,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="without AOP" />
-    <MESSAGE value="AOP" />
-    <MESSAGE value="Aop" />
     <MESSAGE value="Spring Starter" />
     <MESSAGE value="Hello World Web App using SpringBoot &amp; Spring MVC" />
     <MESSAGE value="Default configurations modifications" />
     <MESSAGE value="Thymeleaf" />
     <MESSAGE value="Hello World Web App using Thymeleaf &amp; DevTools Demo" />
     <MESSAGE value="Build EazySchool HomePage" />
-    <MESSAGE value="system" />
     <MESSAGE value="Adding new beans to the Spring context" />
     <MESSAGE value="Understanding &amp; Resolving NoUniqueBeanDefinitionException" />
     <MESSAGE value="Different ways to name a Bean" />
@@ -518,7 +567,11 @@
     <MESSAGE value="Assignment related to Beans, Autowiring, DI" />
     <MESSAGE value="Singleton Bean Scope inside Spring" />
     <MESSAGE value="Eager &amp; Lazy instantiation of Singleton beans" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eager &amp; Lazy instantiation of Singleton beans" />
+    <MESSAGE value="Prototype Bean Scope inside Spring" />
+    <MESSAGE value="&#10;Ohne : Aspect Oriented Programming (AOP) inside Spring" />
+    <MESSAGE value="Aspect Oriented Programming (AOP) inside Spring" />
+    <MESSAGE value="system" />
+    <option name="LAST_COMMIT_MESSAGE" value="system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
