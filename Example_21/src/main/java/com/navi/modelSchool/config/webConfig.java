@@ -11,6 +11,11 @@ public class webConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         //Url pattern and file name, don't need to put .html extension
         registry.addViewController("/courses").setViewName("courses");
+        registry.addViewController("/about").setViewName("about");
+        registry.addViewController("/contact").setViewName("contact");
+        /*registry.addViewController("/about").setViewName("about");
+        registry.addViewController("/about").setViewName("about");*/
+
 
     }
 }
