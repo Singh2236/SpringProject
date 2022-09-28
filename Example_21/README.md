@@ -80,24 +80,65 @@ Provided features -
 2. DevTools includes an embedded LiveReload server that can be used to trigger a browser refresh when a resource is
    changed. Live Reloader extensions are available for most of the browsers.
 3. DevTools trigger a restart, whenever a restart is triggered through IDE or by Maven commands. DevTools disable the
-   caching options by default during development. Repacked archives do not contain DevTools by default. 
+   caching options by default during development. Repacked archives do not contain DevTools by default.
 
+### Adding Thymeleaf links to all the home buttons
 
-### Adding Thymeleaf links to all the home buttons 
 ````thymeleafexpressions
 th:href="@{/home}"
 ````
 
-### Upgrading Controller class logic in Configurations file 
+### Upgrading Controller class logic in Configurations file
+
 Whenever we have a scenario, where we have to manage many kinds of Mappings, we use kind of class below.
 
 ```java
+
 @Configuration
 public class webConfig implements WebMvcConfigurer {
-   @Override
-   public void addViewControllers(ViewControllerRegistry registry) {
-      registry.addViewController("/courses").setViewName("courses"); //Url pattern and file name, don't need to put .html extension
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/courses").setViewName("courses"); //Url pattern and file name, don't need to put .html extension
 
-   }
+    }
 }
 ```
+
+# Contact page
+
+is not to be configured using `andViewControllers`, because we have to handle forms in it.
+
+1. New Controller class
+
+````java
+
+@Controller
+@Controller
+public class ContactController {
+    private static Logger log = LoggerFactory.getLogger(ContactController.class);
+
+
+    @PostMapping(value = "/saveMsg")
+    //@RequestMapping(value = "/saveMsg", method = POST)
+    public ModelAndView displayContactPage(@RequestParam String name, @RequestParam(value = "mobileNum") String mob,
+                                           @RequestParam String email, @RequestParam String subject,
+                                           @RequestParam String message) {
+        log.info("Name " + name);
+        log.info("Mobile Number  " + mob);
+        log.info("Email:  " + email);
+        log.info("Subject: " + subject);
+        log.info("Msg:  " + message);
+
+        return new ModelAndView(("redirect:/contact"));
+
+    }
+}
+````
+
+The problem here is that we are accepting too many parameters, if there are more parameters than the method will grow
+and making things complex and hard to handle, extra code, no neat code, we could have done that with simple pojo class.
+We will do that next. 
+
+### ModelAndView class
+
+helps in sending the data from backend to UI. 
