@@ -1,14 +1,19 @@
 package com.navi.modelSchool.service;
 
-import com.navi.modelSchool.model.ContactModel;
+import com.navi.modelSchool.model.Contact;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ContactService {
-    public void printContactData(ContactModel contact){
-        System.out.println(contact.getName() + " ");
-        System.out.println(contact.getEmil() + " ");
-        System.out.println(contact.getMobileNumber() + " ");
-        System.out.println(contact.getSub() + " ");
-        System.out.println(contact.getMsg() + " ");
+    public static Logger log = LoggerFactory.getLogger(ContactService.class);
+    public boolean saveContactData(Contact contact){
+        boolean isSaved = true;
+        //TODO: Need to Persist the Data inti the DB table.
+        log.info(contact.toString());
+        return isSaved;
     }
 
 }
