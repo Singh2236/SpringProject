@@ -62,15 +62,14 @@ public class HolidaysController {
 
     //Path Parameters
     @GetMapping("/holidays/{display}")
-    public String displayHolidays(@PathVariable String display, Model model) {
-        if (null != display && display == "all") {
-            model.addAttribute("festival", true);
-            model.addAttribute("federal", true);
-        } else if (null != display && display == "festival") {
-            model.addAttribute("festival", true);
-        } else if (null != display && display == "federal") {
-            model.addAttribute("federal", true);
-
+    public String displayHolidays(@PathVariable String display,Model model) {
+        if(null != display && display.equals("all")){
+            model.addAttribute("festival",true);
+            model.addAttribute("federal",true);
+        }else if(null != display && display.equals("federal")){
+            model.addAttribute("federal",true);
+        }else if(null != display && display.equals("festival")){
+            model.addAttribute("festival",true);
         }
 
         List<Holiday> holidays = Arrays.asList(
