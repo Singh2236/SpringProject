@@ -21053,6 +21053,53 @@ h4.inner-text-title {
   text-align: right;
 }
 
+@media (max-width: 1280px) {}
+
+@media (max-width: 1080px) {}
+
+@media (max-width: 800px) {
+  .w3l-timeline-1 .timeline .column {
+    margin: 0px 0px 40px 120px;
+  }
+}
+
+@media (max-width: 568px) {
+  .w3l-timeline-1 .timeline .column {
+    margin: 0px 0px 40px 60px;
+  }
+
+  .w3l-timeline-1 .timeline::before {
+    left: 15px;
+  }
+
+  .w3l-timeline-1 .timeline .column .title h2:before {
+    left: -53px;
+    top: 7px;
+  }
+
+  .w3l-timeline-1 h5.sub-title-timeline {
+    margin-left: .4em;
+  }
+}
+
+@media (max-width: 400px) {
+  .w3l-timeline-1 .timeline .column {
+    margin: 0px 0px 40px 40px;
+  }
+
+  .w3l-timeline-1 .timeline .column .title h2 {
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .w3l-timeline-1 .timeline .column .title h2:before {
+    left: -32px;
+    top: 4px;
+  }
+}
+
+/* holidays section */
+
 /* contact section */
 .contact-block input,
 .contact-block textarea {
