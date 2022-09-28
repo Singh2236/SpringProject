@@ -1,4 +1,21 @@
-# @RequestParam Annotation
+# In this module we will see the concepts of @RequestParam and @PathParam
+
+# Difference b/w them Query Params and Path Params
+
+Query:
+
+1. The frontEnd Application can send the URl in a Query Param Style. Since, some conditions are also embedded inside
+   the URL. ``like http://someWebsite.com/products?order=new``
+   or ``http://someWebsite.com/products?order=popular&filer=new``.
+
+Path:
+
+1. This works by mentioning the variables inside the path value itself. like:
+   ``http://someWebsite.com/products/popular/new``
+   ``http://someWebsite.com/products/popular/highRated``
+2. More variables can be added just by appending like in example two above.
+
+# Query Params
 
 - In Spring ``@RequestParam`` annotation is used to map either query parameter or form data.
 - For Example: if we want to get parameter value from a HTTP GET request URL then we can use @RequestParam Annotation
@@ -15,9 +32,10 @@
 5. The ``defaultValue`` for the parameter is to handle missing values or null values. If the parameter does not contain
    any value then this default value will be considered.
 
-# Path variable Annotations
+# Path variable
 
-- The @PathVariable annotation is used to extract the value from the URL. It is the most suitable for the RESTful web
+- The ``@PathVariable`` annotation is used to extract the value from the URL. It is the most suitable for the RESTful
+  web
   service where the URL contains some value. Spring MVC allows us to use multiple @PathVariable annotation in the same
   method.
 - For Example, if we want to get the values from a request URL path, then we can use @PathVariable annotation like in
@@ -29,7 +47,7 @@ http://localhost://8080/holidays/federal
 http://localhost://8080/holidays/frstival
 ````
 
-# Making changes in the Project to add @RequestParams
+# Demo of Query Params
 
 ````html
 
@@ -104,5 +122,10 @@ will assume it to be null/false and show the expected holidays. That Param was a
 Let's make param mandatory by making the ``required`` fields ``true```.
 This means that, backend server now wants these boolean values, egal true or false, and if not provided, it will
 throw an error.
+
+# Demo Path Params 
+
+
+
 
 
