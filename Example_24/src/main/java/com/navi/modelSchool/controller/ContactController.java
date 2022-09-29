@@ -48,7 +48,7 @@ public class ContactController {
     }*/
 
     @PostMapping(value = "/saveMsg")
-    public String displayContactPage(@Valid @ModelAttribute("contact") Contact contact, Errors errors) {  //How the fuck, this method knows about the variable coming from UI.
+    public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors) {  //How the fuck, this method knows about the variable coming from UI.
         if (errors.hasErrors()) {
             log.error("Contact form validation failed due to: " + errors.toString());
             return "contact.html"; //This is not the new fresh page but the same page, where user was typing the information.

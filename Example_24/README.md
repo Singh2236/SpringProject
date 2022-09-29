@@ -118,14 +118,14 @@ public String displayContactPage(Model model){
 
     ````java
     @PostMapping(value = "/saveMsg")
-    public String displayContactPage(@Valid @ModelAttribute("contact") Contact contact,Errors errors){  //How the fuck, this method knows about the variable coming from UI.
-            if(errors.hasErrors()){
-            log.error("Contact form validation failed due to: "+errors.toString());
-            return"contact.html"; //This is not the new fresh page but the same page, where user was typing the information.
-            }
-            contactService.saveContactData(contact);
-            return"redirect:/contact"; // This is new page shown when the form is submitter correctly. 
-            }
+    public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors) { 
+        if (errors.hasErrors()) {
+            log.error("Contact form validation failed due to: " + errors.toString());
+            return "contact.html"; //This is not the new fresh page but the same page, where user was typing the information.
+        }
+        contactService.saveContactData(contact);
+        return "redirect:/contact"; // This is new page shown when the form is submitter correctly.
+    }
     ````
 
     6. Now we caught those errors we have to show them to the user. For the same, just above the form tag, we add a
@@ -142,11 +142,22 @@ public String displayContactPage(Model model){
                 <li class="alert alert-danger" role="alert" th:each="error : ${#fields.errors('contact.*')}" th:text="${error}" />
             </ul>
     ````
-   
+
 ### Summary
+
 1. Added dependency
 2. Added contrasts to POJO.
-3. Contact Controller, First time 
+3. Contact Controller, For the first time accessing contact page, we are sending he ``contact``  object with the
+   attribute of same name to get the values for Validations.
+4. Linked that to the form page with the help of th object.
+5. Defined and linked the Object and fields with the help of th object.
+6. During submission, the action will invoke and the method related to that, there we have included the annotations
+   `` @Valid `` and ``@ModelAttribute("passes the object which is comming from front-end)``.
+7. We are also accepting the errors input parameters for this ``saveMessage()`` method.
+8. If there are any errors, we are returning errors to the same page ``contact.html`` otherwise if everything works
+   fine, we are redirecting to the fresh ``"redirect:/contact"`` page.
+9. If there are any errors, will be sent to same page and those errors will be caught by ``th:error`` tag related to
+   contact bean. Once we have the list of errors, we are displaying with the help of ``th:each`` iterator. 
 
 
    
