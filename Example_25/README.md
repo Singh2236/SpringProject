@@ -28,8 +28,13 @@ annotation helps in creating bean for every **request** that is coming to the ba
 
 # Session Scope (@SessionScope)
 
-Bean created, when a new HTTP Session is formed, it maintains the same bean until the same perticular HTTP Session is
-over or invalidated
+Bean created, when a new HTTP Session is formed, it maintains the same bean until the same particular HTTP Session is
+over or invalidated. A session will start when a user start using our Web-Application. The Same session will continue
+until he closes the browser, or invalidating the session by signing out of the Web-Application, or clearing the cache.
+HTTP Session is combination of multiple HTTP Requests that is coming from the same user.
 
 # Application Scope (ApplicationScope)
+
+Only one bean is created for the entire application, like if there are multiple users accessing you Application, they
+will have the same reference of   bean. 
 
