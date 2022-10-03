@@ -67,3 +67,20 @@ By writing just very less code, we can control, which user can access which data
    spring.security.user.password= 12345
    ````
    By default, the pages are secured inside our web application, and furthermore we are going to make it more specific.
+
+## Understanding the default security sttings
+
+1. class ``webConfigureSecuriyAdapter``
+   <kbd> ![img.png](img.png) </kbd>
+
+2. here we are securing any type of url requests. ``(.anyrequest --> authenticate)``
+3. ``.authenticated()`` method tells the spring mvc to authenticate the particular request.
+4. ``.anyRequest()`` since we are using anyRequest(), spring mvc will perform authentication on all the requests by
+default.
+5. In order to override the current default configurations we need to import this class and override this method. 
+
+
+## Overriding the default behavior of the Application.
+### Making all the pages Public
+1. Using ``permitAll()`` configurations, we can allow 
+
