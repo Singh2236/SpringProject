@@ -284,6 +284,7 @@ Key points of matcher methods:  <br>
 
 # Configuring Multiple Users using inMemoryAuthentication()
 
+In ``ProjectSecurityConfig`` class --> 
 
 ````java
  @Bean
