@@ -76,11 +76,24 @@ By writing just very less code, we can control, which user can access which data
 2. here we are securing any type of url requests. ``(.anyrequest --> authenticate)``
 3. ``.authenticated()`` method tells the spring mvc to authenticate the particular request.
 4. ``.anyRequest()`` since we are using anyRequest(), spring mvc will perform authentication on all the requests by
-default.
-5. In order to override the current default configurations we need to import this class and override this method. 
-
+   default.
+5. ``http.formLogin()`` provides support for username and password being provided through a html form.
+6. ``http.httpBasic()`` Auth using HTTP header in order to provide the username and password when making the request to
+   the server.
+7. In order to override the current default configurations we need to import this class and override this method.
 
 ## Overriding the default behavior of the Application.
+
 ### Making all the pages Public
-1. Using ``permitAll()`` configurations, we can allow 
+
+1. Using ``permitAll()`` configurations, we can allow full/public access to a specific resource/path or all the
+   resources/paths inside a web application.
+2. Below is the simple configuration, that we can do in order to any request into a web application w/o security. 
+````java
+
+````
+
+3. Create a new Class extend ``WebSecurityConfigurerAdapter`` and override the configure method. 
+
+
 
