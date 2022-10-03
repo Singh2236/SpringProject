@@ -182,7 +182,7 @@ public class ProjectSecurityConfig  /*extends WebSecurityConfigurerAdapter*/ {
     }
 ````
 
-## How to apply my security requirements in my web application based on my business requirements
+## Configure Custom Security  Configurations
 
 So far, we have three options-
 
@@ -190,11 +190,17 @@ So far, we have three options-
 2. Permitting all the requests
 3. Denying all the requests
 
-But we can not use all these three security behaviour because, there are many web pages or Rest apis, some of which has
-to allowed to public and some not.
+- We can apply custom security configurations based on our requirements for each API/URL like below.
+- permitAll() can be used to allow access w/o security and authenticated() can be used to protect a web page/API.
+- By default, any request with HTTP methods that can update data like POST, PUT will be stopped with 403 error die to
+  CSRF protection. We can disable the same for now and enable in the coming changes when we started generating CSRF
+  tokens.
+- Below is the simple configuration that we can deo to implement custom security configs and disable CSRF.
 
 Again we are overriding the method called ``configure``
+
 ````java
+
 @Controller
 public class ProjectSecurityConfig {
     /**
@@ -221,6 +227,63 @@ public class ProjectSecurityConfig {
     }
 ````
 
+Also, Spring Security offers three types of matchers methods to configure endpoints security,
+
+1. MVC Matchers
+2. Ant Matchers
+3. Regex Matchers
+
+## Matcher Methods in Spring Security
+
+Key points of matcher methods:  <br>
+
+<h4> MVC matchers : </h4>
+
+1. `mvcMatcher()` uses Spring MVC's HandleMappingIntrospector to match the path and extract variables.
+2. `mvcMatcher(HttpMethod method, String..patterns)`. We can specify both the HTTP method and path pattern to configure
+   restrictions.
+3. `mvcMatchers(String..patterns)`, We can specify only path pattern to configure restrictions and tell the HTTP methods
+   will be allowed.
+
+<h4> ANT matchers : </h4>
+
+1. antMatters() is an implimentation anti style path patterns. Below are the supported methods around it.
+    * `antMatchers(HttpMethod method, String..Patterns)`
+    * `antMatchers(String..Patterns)`
+    * `antMatchers(HttpMethod method)`
+2. Generally mvcMatchers is more secure that an antMatcher. As an example
+    + `antMatchers("/secured")` matches only the exact / secured URL
+    + `mvcMatchers("/secured")`matches `/secured` as well as `/secured/` , `/secured.html`, `/secured.xzy`.
+
+<h4> Regex matchers :</h4>
+
+1. Regexes can be used to match any format of string pattern, so they offer unlimited possibilities for this matter.
+2. `regexMatchers(HttpMethod method, String regex)` - we can specify both HTTP method and path regex to configure
+   restrictions.
+3. `regexMatchers(String regex)` - we can specify only path regex to configure restrictions and all the HTTP methods will
+   be allowed.
+
+
+````java
+
+@Bean
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .authorizeRequests()
+                .mvcMatchers("/home").permitAll()
+                .mvcMatchers("/holidays/**").permitAll()
+                .mvcMatchers("/contact").permitAll()
+                .mvcMatchers("/saveMsg").permitAll()
+                .mvcMatchers("/courses").permitAll()
+                .mvcMatchers("/about").permitAll()
+                .and().formLogin().and().httpBasic();
+        return http.build();
+    } 
+````
+
+
+
+## CSRF Disable 
 
 
 
