@@ -35,7 +35,7 @@ public class ProjectSecurityConfig {
                 .and().formLogin().loginPage("/login")//mapping to your own login page
                 .defaultSuccessUrl("/dashboard")// fwd to dashboard after successful logging
                 .failureUrl("/login?error=true").permitAll()
-                .and().logout().logoutSuccessUrl("/logout?logout=true")
+                .and().logout().logoutSuccessUrl("/login?logout=true")
                 .invalidateHttpSession(true).permitAll()
 
 
