@@ -109,19 +109,26 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
 ````
 
 ### Denying all the requests.
+
 ````java
-protected void configure(HttpSecurity http) throws Exception {
+protected void configure(HttpSecurity http)throws Exception{
         //Permit all the requests inside the web-application
 
         http.authorizeRequests()
-                .anyRequest().denyAll()
-                .and().formLogin()
-                .and().httpBasic();
-    }
-}
+        .anyRequest().denyAll()
+        .and().formLogin()
+        .and().httpBasic();
+        }
+        }
 ````
 
-## Updates 
+note: In the case of denyAll(), Spring will ask for credentials and even after putting right credentials, it will still
+deny to show the page. Because, a user is authenticated but not authorised to view this particular page or in the above
+case we are not authorised to see any page on our web application since we have denied all the requests. 
+
+
+## Updates
+
 From Spring Security 5.7, the `WebSecurityConfigurerAdapter` is deprecated to encourage users to move towards a
 component-based security configuration. It is recommended to create a bean of type `SecurityFilterChain` for security
 related configurations.
