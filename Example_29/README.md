@@ -198,6 +198,7 @@ So far, we have three options-
 - Below is the simple configuration that we can deo to implement custom security configs and disable CSRF.
 
 Again we are overriding the method called ``configure``
+We use 
 
 ````java
 
@@ -281,6 +282,26 @@ Key points of matcher methods:  <br>
     } 
 ````
 
+# Configuring Multiple Users using inMemoryAuthentication()
+
+
+````java
+ @Bean
+    public InMemoryUserDetailsManager userDetailsService() {
+
+        UserDetails admin = User.withDefaultPasswordEncoder()
+                .username("user")
+                .password("12345")
+                .roles("USER")
+                .build();
+        UserDetails user = User.withDefaultPasswordEncoder()
+                .username("admin")
+                .password("54321")
+                .roles("USER","ADMIN")
+                .build();
+        return new InMemoryUserDetailsManager(user, admin);
+    }
+````
 
 
 
