@@ -194,11 +194,31 @@ But we can not use all these three security behaviour because, there are many we
 to allowed to public and some not.
 
 Again we are overriding the method called ``configure``
-
-
-
 ````java
+@Controller
+public class ProjectSecurityConfig {
+    /**
+     * From Spring Security 5.7, the WebSecurityConfigurerAdapter is deprecated to encourage users
+     * to move towards a component-based security configuration. It is recommended to create a bean
+     * of type SecurityFilterChain for security related configurations.
+     * @param http
+     * @return SecurityFilterChain
+     * @throws Exception
+     */
 
+    @Bean
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .authorizeRequests()
+                .mvcMatchers("/home").permitAll()
+                .mvcMatchers("/holidays/**").permitAll()
+                .mvcMatchers("/contact").permitAll()
+                .mvcMatchers("/saveMsg").permitAll()
+                .mvcMatchers("/courses").authenticated()
+                .mvcMatchers("/about").permitAll()
+                .and().formLogin().and().httpBasic();
+        return http.build();
+    }
 ````
 
 
