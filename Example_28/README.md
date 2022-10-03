@@ -268,7 +268,7 @@ Key points of matcher methods:  <br>
 
 @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http.csrf().disable()           // Also disabling the CSRF security 
                 .authorizeRequests()
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/holidays/**").permitAll()
@@ -281,9 +281,6 @@ Key points of matcher methods:  <br>
     } 
 ````
 
-
-
-## CSRF Disable 
 
 
 
