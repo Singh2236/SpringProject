@@ -198,7 +198,7 @@ So far, we have three options-
 - Below is the simple configuration that we can deo to implement custom security configs and disable CSRF.
 
 Again we are overriding the method called ``configure``
-We use 
+We use
 
 ````java
 
@@ -261,47 +261,75 @@ Key points of matcher methods:  <br>
 1. Regexes can be used to match any format of string pattern, so they offer unlimited possibilities for this matter.
 2. `regexMatchers(HttpMethod method, String regex)` - we can specify both HTTP method and path regex to configure
    restrictions.
-3. `regexMatchers(String regex)` - we can specify only path regex to configure restrictions and all the HTTP methods will
+3. `regexMatchers(String regex)` - we can specify only path regex to configure restrictions and all the HTTP methods
+   will
    be allowed.
-
 
 ````java
 
 @Bean
-    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()           // Also disabling the CSRF security 
-                .authorizeRequests()
-                .mvcMatchers("/home").permitAll()
-                .mvcMatchers("/holidays/**").permitAll()
-                .mvcMatchers("/contact").permitAll()
-                .mvcMatchers("/saveMsg").permitAll()
-                .mvcMatchers("/courses").permitAll()
-                .mvcMatchers("/about").permitAll()
-                .and().formLogin().and().httpBasic();
-        return http.build();
-    } 
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http)throws Exception{
+            http.csrf().disable()           // Also disabling the CSRF security 
+            .authorizeRequests()
+            .mvcMatchers("/home").permitAll()
+            .mvcMatchers("/holidays/**").permitAll()
+            .mvcMatchers("/contact").permitAll()
+            .mvcMatchers("/saveMsg").permitAll()
+            .mvcMatchers("/courses").permitAll()
+            .mvcMatchers("/about").permitAll()
+            .and().formLogin().and().httpBasic();
+            return http.build();
+            } 
 ````
 
 # Configuring Multiple Users using inMemoryAuthentication()
 
-In ``ProjectSecurityConfig`` class --> 
+In ``ProjectSecurityConfig`` class -->
 
 ````java
  @Bean
-    public InMemoryUserDetailsManager userDetailsService() {
+public InMemoryUserDetailsManager userDetailsService(){
 
-        UserDetails admin = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("12345")
-                .roles("USER")
-                .build();
-        UserDetails user = User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("54321")
-                .roles("USER","ADMIN")
-                .build();
-        return new InMemoryUserDetailsManager(user, admin);
-    }
+        UserDetails admin=User.withDefaultPasswordEncoder()
+        .username("user")
+        .password("12345")
+        .roles("USER")
+        .build();
+        UserDetails user=User.withDefaultPasswordEncoder()
+        .username("admin")
+        .password("54321")
+        .roles("USER","ADMIN")
+        .build();
+        return new InMemoryUserDetailsManager(user,admin);
+        }
+````
+
+## Making our own custom login page
+
+``and().formLogin().loginPage("/login")//mapping to your own login page
+.defaultSuccessUrl("/dashboard")// fwd to dashboard after successful logging``
+
+````java
+@Bean
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http)throws Exception{
+            http.csrf().disable()
+            .authorizeRequests()
+            .mvcMatchers("/dashboard").authenticated() //always secure the dashboard
+            .mvcMatchers("/home").permitAll()
+            .mvcMatchers("/holidays/**").permitAll()
+            .mvcMatchers("/contact").permitAll()
+            .mvcMatchers("/saveMsg").permitAll()
+            .mvcMatchers("/courses").permitAll()
+            .mvcMatchers("/about").permitAll()
+            .mvcMatchers("/login").permitAll() //login page should be seen by all
+            .and().formLogin().loginPage("/login")//mapping to your own login page
+            .defaultSuccessUrl("/dashboard")// fwd to dashboard after successful logging
+            .failureUrl("/login?error=true").permitAll()
+            .and().logout().logoutSuccessUrl("/logout?logout=true")
+            .invalidateHttpSession(true).permitAll()
+            .and().httpBasic();
+            return http.build();
+            }
 ````
 
 

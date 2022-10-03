@@ -24,13 +24,23 @@ public class ProjectSecurityConfig {
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
+                .mvcMatchers("/dashboard").authenticated() //always secure the dashboard
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/holidays/**").permitAll()
                 .mvcMatchers("/contact").permitAll()
                 .mvcMatchers("/saveMsg").permitAll()
                 .mvcMatchers("/courses").permitAll()
                 .mvcMatchers("/about").permitAll()
-                .and().formLogin().and().httpBasic();
+                .mvcMatchers("/login").permitAll() //login page should be seen by all
+                .and().formLogin().loginPage("/login")//mapping to your own login page
+                .defaultSuccessUrl("/dashboard")// fwd to dashboard after successful logging
+                .failureUrl("/login?error=true").permitAll()
+                .and().logout().logoutSuccessUrl("/logout?logout=true")
+                .invalidateHttpSession(true).permitAll()
+
+
+                .and().httpBasic();
+
         return http.build();
     }
 
