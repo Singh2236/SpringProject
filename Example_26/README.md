@@ -37,6 +37,7 @@ By writing just very less code, we can control, which user can access which data
    security Spring-based applications.
 2. Below is the maven dependency that we can add to implement security using Spring Security project in any of the
    SpringBoot Projects.
+
 ````
 <dependency>
    <groupId>org.springframework.boot</groupId>
@@ -49,4 +50,20 @@ By writing just very less code, we can control, which user can access which data
 5. Spring Security helps developers with easier configurations to secure a web application by using standard
    username/password authentication mechanism.
 6. Spring Security provides out of the box features to handle common security attacks like CSRF, CORs. It also has good
-   integrations with security standards like JWT, OAUTH2 etc. 
+   integrations with security standards like JWT, OAUTH2 etc.
+
+# Demo
+
+1. Add dependency
+2. Build and Run the application
+3. Open Browser and go to localhost:8080, asking for username and password
+4. Username : user Password : (see logs of application Startup)
+
+## Setting your own Username and Passwords
+
+1. Application.properties - (not the production standard, not recommend)
+   ````
+   spring.security.user.name= navi
+   spring.security.user.password= 12345
+   ````
+   By default, the pages are secured inside our web application, and furthermore we are going to make it more specific.

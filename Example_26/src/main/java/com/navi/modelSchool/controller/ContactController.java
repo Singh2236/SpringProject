@@ -53,7 +53,7 @@ public class ContactController {
             log.error("Contact form validation failed due to: " + errors.toString());
             return "contact.html"; //This is not the new fresh page but the same page, where user was typing the information.
         }
-        contactService.saveContactData(contact);
+        contactService.saveMessageDetails(contact);
         return "redirect:/contact"; // This is new page shown when the form is submitter correctly.
     }
 
