@@ -162,7 +162,7 @@ public class ProjectSecurityConfig  /*extends WebSecurityConfigurerAdapter*/ {
      * of type SecurityFilterChain for security related configurations.
      * @param http
      * @return SecurityFilterChain
-     //* @throws Exception
+    //* @throws Exception
      */
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
@@ -372,9 +372,10 @@ In order to hide the technical errors to the end-users we make a custom error pa
 + ``@ControllerAdvice`` is specialization of ``@Component`` annotation, which allows to handle exceptions across the
   whole application in one global handling component. You can think of it as an interceptor of exception thrown by
   methods annotated with ``@RequestMapping``, etc.
-+ We can define the exception handle logic inside a method and annotate it with ``@ExceptionHandler`` 
-+ You can handle eny type of exceptions, but you have to mention it in the parenthesis. i.e. Executions.class
-+ Below is the code. 
++ We can define the exception handle logic inside a method and annotate it with
++ You can handle eny type of exceptions, but you have to mention it in the parenthesis. i.e. ``Exception.class`` which
+  is parent of all the exceptions.
++ Below is the code.
 
 ````java
 
