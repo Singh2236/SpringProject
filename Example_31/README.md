@@ -379,7 +379,25 @@ In order to hide the technical errors to the end-users we make a custom error pa
 
 ````java
 
+@Slf4j
+@ControllerAdvice
+public class GlobalExceptionsController {
+    public ModelAndView exceptionHandler(Exception exception) {
+        ModelAndView errorPage = new ModelAndView();
+        errorPage.setViewName("error");
+        errorPage.addObject("errorMsg", exception.getMessage());
+        return errorPage;
+    }
 ````
+
+````thymeleafexpressions
+<p th:text="${'Error Message - ' + errormsg}"></p>
+<a th:href="@{/home}">Go to Home</a>
+````
+
+## CSRF
+
+
 
 
 

@@ -22,7 +22,7 @@ public class ProjectSecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http.csrf().ignoringAntMatchers("/saveMsg").and()
                 .authorizeRequests()
                 .mvcMatchers("/dashboard").authenticated() //always secure the dashboard
                 .mvcMatchers("/home").permitAll()
@@ -47,12 +47,12 @@ public class ProjectSecurityConfig {
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
 
-        UserDetails navi = User.builder()
+        UserDetails navi = User.withDefaultPasswordEncoder()
                 .username("navi")
                 .password("12345")
                 .roles("USER")
                 .build();
-        UserDetails admin = User.builder()
+        UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("54321")
                 .roles("USER", "ADMIN")
