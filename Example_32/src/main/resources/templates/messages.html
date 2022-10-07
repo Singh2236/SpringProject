@@ -58,7 +58,7 @@ Author URL: http://w3layouts.com
             </thead>
             <tbody>
             <tr th:each="msg: ${contactMsgs}">  <!-- iterating over list of contact messages  -->
-                <td th:text="${msg.name}"></td> // <!-- getting the fields from the contactMsgs Object-->
+                <td th:text="${msg.name}"></td> <!-- getting the fields from the contactMsgs Object-->
                 <td th:text="${msg.mobileNum}"></td>
                 <td th:text="${msg.email}"></td>
                 <td th:text="${msg.subject}"></td>
