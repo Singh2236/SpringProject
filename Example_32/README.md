@@ -3,6 +3,7 @@
 1. JDBC
 2. JDBC Template
 3. H2
+4. Connection and CRUD Operation
 
 # JDBC
 
@@ -90,14 +91,15 @@ CREATE TABLE IF NOT EXISTS `contact_msg`
 );
 ````
 
-# Connection and CRUD Operations
+# Connection and CRUD Operation 
 
 1. Data present inside your database table has to be converted into pojo class. So, we have to make sure that our pojo
    classes are in sync with our database tables. Let's check our model class of ``contect`` and add the required fields.
 2. Create a new package ``repositories``, add a repo class for Contact i.e. ``contactRepo`` and add the method to save
-   message coming from controller layer. Here, ``jdbcTemplate`` is autowired at constructor, and it is autoconfigured. 
+   message coming from controller layer. Here, ``jdbcTemplate`` is autowired at constructor, and it is autoconfigured.
 
 ````java
+
 @Repository
 public class ContactRepository {
     private final JdbcTemplate jdbcTemplate;
@@ -108,7 +110,7 @@ public class ContactRepository {
     }
 
     public int saveContactMsg(Contact contact) {
-        String sql = "INSERT INTO CONTACT_MSG(NAME,MOBILE_NUM,EMAIL,SUBJECT,MESSAGE,STATUS,CREATED_AT,CREATED_BY) " +
+        String sql = "INSERT INTO CONTACT_MSG(NAME,MOBILENUM,EMAIL,SUBJECT,MESSAGE,STATUS,CREATED_AT,CREATED_BY) " +
                 "VALUES(?,?,?,?,?,?,?,?)";
         return jdbcTemplate.update(sql, contact.getName(), contact.getMobileNum(), contact.getEmail(),
                 contact.getSubject(), contact.getMessage(), contact.getStatus(), contact.getCreatedAt(),
@@ -116,6 +118,50 @@ public class ContactRepository {
     }
 }
 ````
-3. From our service layer we need to invoke the repo. For that we need to inject ``contactRepo`` bean to ``contactService``. 
+
+3. From our service layer we need to invoke the repo. For that we need to inject ``contactRepo`` bean
+   to ``ContactService`` constructor.
+
+````java
+
+@Slf4j
+@Service
+public class ContactService {
+    private final ContactRepository contactRepository;
+
+
+    @Autowired
+    public ContactService(ContactRepository contactRepository) {
+        this.contactRepository = contactRepository;
+    }
+
+    public boolean saveMessageDetails(Contact contact) {
+        boolean isSaved = true;
+        //TODO - Need to persist the data into the DB table
+        contact.setStatus(ModelSchoolConstants.OPEN);
+        contact.setCreatedBy(ModelSchoolConstants.ANONYMOUS);
+        contact.setCreatedAt(LocalDateTime.now());
+        int results = contactRepository.saveContactMsg(contact);
+        if (results > 0)
+            isSaved = true;
+        return isSaved;
+    }
+}
+
+````
+
+4. Finally, calling ``saveMessageDetails()`` method from the controller class.
+
+````java
+ @PostMapping(value = "/saveMsg")
+public String saveMessage(@Valid @ModelAttribute("contact") Contact contact,Errors errors){  //How the fuck, this method knows about the variable coming from UI.
+        if(errors.hasErrors()){
+        log.error("Contact form validation failed due to: "+errors.toString());
+        return"contact.html"; //This is not the new fresh page but the same page, where user was typing the information.
+        }
+        contactService.saveMessageDetails(contact);
+        return"redirect:/contact"; // This is new page shown when the form is submitter correctly.
+        }
+````
 
 
