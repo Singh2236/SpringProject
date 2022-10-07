@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `contact_msg`
 );
 ````
 
-# Connection and CRUD Operation 
+# Connection and CRUD Operation
 
 1. Data present inside your database table has to be converted into pojo class. So, we have to make sure that our pojo
    classes are in sync with our database tables. Let's check our model class of ``contect`` and add the required fields.
@@ -142,8 +142,9 @@ public class ContactService {
         contact.setCreatedBy(ModelSchoolConstants.ANONYMOUS);
         contact.setCreatedAt(LocalDateTime.now());
         int results = contactRepository.saveContactMsg(contact);
-        if (results > 0)
+        if (results > 0) {
             isSaved = true;
+        }
         return isSaved;
     }
 }
@@ -163,5 +164,134 @@ public String saveMessage(@Valid @ModelAttribute("contact") Contact contact,Erro
         return"redirect:/contact"; // This is new page shown when the form is submitter correctly.
         }
 ````
+
+# Display Contact Message from DB using JDBC Template
+
+1. Front End changes
+   ![img_2.png](img_2.png)
+   This message div has only ot be shown to the users who have admin access.
+   ``sec:authorize="hasRole('ROLE_ADMIN')``
+   Update css classes.
+
+2. Back End changes
+    + Updating path ``/displayMessages``
+
+````java
+@RequestMapping("/displayMessages")
+public ModelAndView displayMessages(Model model){
+        List<Contact> contactMsgs=contactService.findMsgWithOpenStatus();
+        ModelAndView modelAndView=new ModelAndView("messages.html");
+        modelAndView.addObject("contactMsgs",contactMsgs);
+        return modelAndView;
+        }
+`````
+
++ Add new html called ``contactMsgs`` to front end
+  we have a table to show the data
+
+````thymeleafexpressions
+<tr>
+<th scope="col">Name</th>
+    <th scope="col">Mobile Num</th>
+    <th scope="col">Email</th>
+    <th scope="col">Subject</th>
+    <th scope="col">Message</th>
+    <th scope="col"></th>
+</tr>
+````
+
+Then, we have th:each for iterating over the list of objects we are getting from the backend and with their respective
+fields, and with the ``close`` button the admin will have the ability to close the messages. ``back`` button will take
+us back to the dashboard.
+
+````thymeleafexpressions
+<tr th:each="msg: ${contactMsgs}">  <!-- iterating over list of contact messages  -->
+    <td th:text="${msg.name}"></td> // <!-- getting the fields from the contactMsgs Object-->
+    <td th:text="${msg.mobileNum}"></td>
+    <td th:text="${msg.email}"></td>
+    <td th:text="${msg.subject}"></td>
+    <td th:text="${msg.message}"></td>
+    <td><a th:href="@{/closeMsg(id=${msg.contactId})}" class="btn btn-style btn-style-3">CLOSE</a></td>
+</tr>
+<div class="col-md-2 login-center text-start">
+        <a th:href="@{/dashboard}">
+        <button class="btn btn-style btn-style-3 text-left">BACK</button>
+        </a>
+    </div>
+````
+
++ Create ``findMsgWithOpenStatus()`` method to get the data from the database in the ``ContactService`` class.
+
+````java
+public List<Contact> findMsgWithOpenStatus(){
+        List<Contact> contactMsgs=contactRepository.findMsgsWithStatus(ModelSchoolConstants.OPEN);
+        return contactMsgs;
+        }
+````
+
++ Create ``findMsgsWithStatus(ModelSchoolConstants.OPEN)`` in ``ContactRepository`` class. Method will accept ``status``
+  .
+    - Here we are using ``jdbcTemplate.query()`` to get the list of Objects from the db.
+    - In this method, our first parameter will be simple 'sql'.
+    - The second is Prepared Statements
+        - Prepared statements have some question marks in the query which we have to populate, by the following code we
+          are doing that.
+
+```````java
+new PreparedStatementSetter(){
+public void setValues(PreparedStatement preparedStatement)throws SQLException{
+        preparedStatement.setString(1,status);
+        }
+```````
+
+- The third parameter will be **RowMapper**: to map all the values we are getting from the query to the POJO class
+  fields.
+  - Next to Next is the full code explanation of the RowMappers.
+  
+
+Below is the full method in one snippet.
+
+````java
+public List<Contact> findMsgsWithStatus(String status){
+        String sql="SELECT * FROM CONTACT_MSG WHERE STATUS = ?";
+        return jdbcTemplate.query(sql,new PreparedStatementSetter(){
+public void setValues(PreparedStatement preparedStatement)throws SQLException{
+        preparedStatement.setString(1,status);
+        }
+        },new ContactRowMapper());
+        }
+````
+
+### RowMappers 
+- implement ``RowMapper`` interface and pass the pojo class for the object ``\<Contact>``, and override a
+method ``mapRow()``. 
+
+````java
+public class ContactRowMapper implements RowMapper<Contact> {
+
+    @Override
+    public Contact mapRow(ResultSet rs, int rowNum) throws SQLException {
+        Contact contact = new Contact();
+        contact.setContactId(rs.getInt("CONTACT_ID"));
+        contact.setName(rs.getString("NAME"));
+        contact.setMobileNum(rs.getString("MOBILE_NUM"));
+        contact.setEmail(rs.getString("EMAIL"));
+        contact.setSubject(rs.getString("SUBJECT"));
+        contact.setMessage(rs.getString("MESSAGE"));
+        contact.setStatus(rs.getString("STATUS"));
+        contact.setCreatedAt(rs.getTimestamp("CREATED_AT").toLocalDateTime());
+        contact.setCreatedBy(rs.getString("CREATED_BY"));
+
+        if (null != rs.getTimestamp("UPDATED_AT")) {
+            contact.setUpdatedAt(rs.getTimestamp("UPDATED_AT").toLocalDateTime());
+        }
+        contact.setUpdatedBy(rs.getString("UPDATED_BY"));
+        return contact;
+    }
+}
+````
+
+
+
 
 

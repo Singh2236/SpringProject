@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 /*
 @Slf4j, is a Lombok-provided annotation that will automatically generate an SLF4J
@@ -43,5 +44,10 @@ public class ContactService {
             isSaved = true;
 
         return isSaved;
+    }
+
+    public List<Contact> findMsgWithOpenStatus() {
+        List<Contact> contactMsgs = contactRepository.findMsgsWithStatus(ModelSchoolConstants.OPEN);
+        return contactMsgs;
     }
 }

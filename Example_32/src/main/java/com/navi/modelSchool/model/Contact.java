@@ -15,7 +15,7 @@ This makes our code short and clean.
 @Data
 public class Contact  extends BaseEntity{
 
-    private int contactID;  //since this data type is the primary key inside our table we are using int datatype.
+    private int contactId;  //since this data type is the primary key inside our table we are using int datatype.
 
     /**
      * @NotNull: Checks if a given field is not null but allows empty values & zero elements inside collections.
