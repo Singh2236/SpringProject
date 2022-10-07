@@ -13,7 +13,7 @@ public class ContactRowMapper implements RowMapper<Contact> {
         Contact contact = new Contact();
         contact.setContactId(rs.getInt("CONTACT_ID"));
         contact.setName(rs.getString("NAME"));
-        contact.setMobileNum(rs.getString("MOBILE_NUM"));
+        contact.setMobileNum(rs.getString("MOBILENUM"));
         contact.setEmail(rs.getString("EMAIL"));
         contact.setSubject(rs.getString("SUBJECT"));
         contact.setMessage(rs.getString("MESSAGE"));
