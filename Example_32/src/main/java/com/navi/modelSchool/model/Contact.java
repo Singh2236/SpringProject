@@ -13,7 +13,9 @@ This makes our code short and clean.
 * */
 
 @Data
-public class Contact {
+public class Contact  extends BaseEntity{
+
+    private int contactID;  //since this data type is the primary key inside our table we are using int datatype.
 
     /**
      * @NotNull: Checks if a given field is not null but allows empty values & zero elements inside collections.
@@ -40,4 +42,6 @@ public class Contact {
     @NotBlank(message = "Message must not be blank")
     @Size(message = "Message must be at least 10 characters long")
     String message;
+
+    private String status;      //for status of the message
 }

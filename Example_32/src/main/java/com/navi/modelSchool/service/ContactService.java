@@ -1,10 +1,14 @@
 package com.navi.modelSchool.service;
 
 
+import com.navi.modelSchool.Constants.ModelSchoolConstants;
 import com.navi.modelSchool.model.Contact;
+import com.navi.modelSchool.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.ApplicationScope;
+
+import java.time.LocalDateTime;
 
 /*
 @Slf4j, is a Lombok-provided annotation that will automatically generate an SLF4J
@@ -12,34 +16,32 @@ Logger static property in the class at compilation time.
 * */
 @Slf4j
 @Service
-//@RequestScope
-//@SessionScope
-@ApplicationScope
+
 public class ContactService {
+    private final ContactRepository contactRepository;
 
-    private int counter = 0;
 
-    public ContactService(){
-        System.out.println("Contact Service Bean initialized");
+    @Autowired
+    public ContactService(ContactRepository contactRepository) {
+        this.contactRepository = contactRepository;
     }
 
     /**
      * Save Contact Details into DB
+     *
      * @param contact
      * @return boolean
      */
-    public boolean saveMessageDetails(Contact contact){
+    public boolean saveMessageDetails(Contact contact) {
         boolean isSaved = true;
         //TODO - Need to persist the data into the DB table
-        log.info(contact.toString());
+        contact.setStatus(ModelSchoolConstants.OPEN);
+        contact.setCreatedBy(ModelSchoolConstants.ANONYMOUS);
+        contact.setCreatedAt(LocalDateTime.now());
+        int results = contactRepository.saveContactMsg(contact);
+        if(results > 0 )
+            isSaved = true;
+
         return isSaved;
-    }
-
-    public int getCounter() {
-        return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
     }
 }
