@@ -266,7 +266,7 @@ public void setValues(PreparedStatement preparedStatement)throws SQLException{
 + RowMapper is an interface, which allows to map a row of the relation with the instance of user-defined class. It
   iterated the ResultSet internally and adds it into the collection. So, we don't need to write a lot of ode to fetch
   the records as ResultSetExtractor.
-+ RowMapper saves a lot of code because it internally adds the data of the ResultSet into the collection. 
++ RowMapper saves a lot of code because it internally adds the data of the ResultSet into the collection.
 + It defines only one method ``mapRow`` the accepts ``ResultSet`` instance and ``int`` as parameter.
 
 - implement ``RowMapper`` interface and pass the pojo class for the object ``\<Contact>``, and override a
@@ -296,6 +296,17 @@ public class ContactRowMapper implements RowMapper<Contact> {
     }
 }
 ````
+
+### Last
+
+We have to make the changes in the Project Security in ``projSecurityConfig``. The new URL that we have just added has
+to be authenticated, at the same time it should also be authorised to certain users. 
+
+````java
+
+````
+
+
 
 
 
