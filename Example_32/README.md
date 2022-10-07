@@ -297,14 +297,72 @@ public class ContactRowMapper implements RowMapper<Contact> {
 }
 ````
 
-### Last
+## Last
 
 We have to make the changes in the Project Security in ``projSecurityConfig``. The new URL that we have just added has
-to be authenticated, at the same time it should also be authorised to certain users. 
+to be authenticated, at the same time it should also be authorised to certain users.
 
+````java
+ .mvcMatchers("/displayMessages").hasRole("ADMIN")
+````
+
+## Building this close button
+
+![img_3.png](img_3.png)
+
+1. ClOSE button code in the front end.
+   In order to send an update-query to change the status of OPEN messages to CLOSE, we have to define the id of the
+   particular object, adn for that we have to use Request Parameters. Like in the code below. We are getting this one
+   particular object at a time, and we have the ``id`` of this msg object. So, through the close button we are sending
+   the
+   id for the same.
+
+````thymeleafexpressions
+<tr th:each="msg: ${contactMsgs}">  <!-- iterating over list of contact messages  -->
+                <td th:text="${msg.name}"></td> <!-- getting the fields from the contactMsgs Object-->
+                <td th:text="${msg.mobileNum}"></td>
+                <td th:text="${msg.email}"></td>
+                <td th:text="${msg.subject}"></td>
+                <td th:text="${msg.message}"></td>
+                <td><a th:href="@{/closeMsg(id=${msg.contactId})}" class="btn btn-style btn-style-3">CLOSE</a></td>
+            </tr>
+````
+
+2. Creating a new method for ``/closeMsg`` in the ``ContactController`` class. Inside ``closeMessage()`` method, we are
+   passing int id for reference to change the status and authentication object to get the name of the authenticated
+   person from their authentication for ``updatedBy`` column in the relation. Like the code below, once the update is
+   complete, the user is redirected to the same page. When that refresh happens, the list of open messages will be
+   reloaded again from the database again. 
+
+````java
+@RequestMapping(value = "/closeMsg", method = RequestMethod.GET)
+public String closeMessage(@RequestParam int id,Authentication authentication){
+        contactService.updateMsgService(id,authentication.getName());
+        return"redirect:/displayMessages";
+        }
+````
+
+3. Create ``updateMsgService()`` in the service class. 
+````java
+ public boolean updateMsgStatus(int contactId, String updatedBy) {
+        boolean isUpdated = false;
+        int result = contactRepository.updateMsgStatus(contactId, ModelSchoolConstants.CLOSE, updatedBy);
+        if (result > 0) {
+            isUpdated = true;
+        }
+        return isUpdated;
+    }
+````
+
+4. Create ``updateMsgStatus()`` in the ``ContactRepository`` 
 ````java
 
 ````
+
+
+
+
+
 
 
 
