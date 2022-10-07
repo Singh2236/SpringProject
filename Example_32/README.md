@@ -332,7 +332,7 @@ to be authenticated, at the same time it should also be authorised to certain us
    passing int id for reference to change the status and authentication object to get the name of the authenticated
    person from their authentication for ``updatedBy`` column in the relation. Like the code below, once the update is
    complete, the user is redirected to the same page. When that refresh happens, the list of open messages will be
-   reloaded again from the database again. 
+   reloaded again from the database again.
 
 ````java
 @RequestMapping(value = "/closeMsg", method = RequestMethod.GET)
@@ -342,22 +342,42 @@ public String closeMessage(@RequestParam int id,Authentication authentication){
         }
 ````
 
-3. Create ``updateMsgService()`` in the service class. 
+3. Create ``updateMsgService()`` in the service class.
+
 ````java
- public boolean updateMsgStatus(int contactId, String updatedBy) {
-        boolean isUpdated = false;
-        int result = contactRepository.updateMsgStatus(contactId, ModelSchoolConstants.CLOSE, updatedBy);
-        if (result > 0) {
-            isUpdated = true;
+ public boolean updateMsgStatus(int contactId,String updatedBy){
+        boolean isUpdated=false;
+        int result=contactRepository.updateMsgStatus(contactId,ModelSchoolConstants.CLOSE,updatedBy);
+        if(result>0){
+        isUpdated=true;
         }
         return isUpdated;
-    }
+        }
 ````
 
-4. Create ``updateMsgStatus()`` in the ``ContactRepository`` 
+4. Create ``updateMsgStatus()`` in the ``ContactRepository``
+
 ````java
+public int updateMsgStatus(int contactId,String status,String updatedBy){
+        String sql="UPDATE CONTACT_MSG SET STATUS = ?, UPDATED_BY = ?, UPDATED_AT = ? WHERE CONTACT_ID = ? ";
+        return jdbcTemplate.update(sql,new PreparedStatementSetter(){
+public void setValues(PreparedStatement ps)throws SQLException{
+        ps.setString(1,status);
+        ps.setString(2,updatedBy);
+        ps.setTimestamp(3,Timestamp.valueOf(LocalDateTime.now()));
+        ps.setInt(4,contactId);
 
+        }
+        });
+        }
 ````
+
+## Implementing AOP in our APP
+
+Requirements :
+
+1. avoid try-catch blocks and manage all kind of exceptions, we don't want to show the specific errors in the web-app,
+   and we want them to be longed on the console.
 
 
 
