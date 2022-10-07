@@ -246,8 +246,7 @@ public void setValues(PreparedStatement preparedStatement)throws SQLException{
 
 - The third parameter will be **RowMapper**: to map all the values we are getting from the query to the POJO class
   fields.
-  - Next to Next is the full code explanation of the RowMappers.
-  
+    - Next to Next is the full code explanation of the RowMappers.
 
 Below is the full method in one snippet.
 
@@ -262,9 +261,16 @@ public void setValues(PreparedStatement preparedStatement)throws SQLException{
         }
 ````
 
-### RowMappers 
+### RowMappers
+
++ RowMapper is an interface, which allows to map a row of the relation with the instance of user-defined class. It
+  iterated the ResultSet internally and adds it into the collection. So, we don't need to write a lot of ode to fetch
+  the records as ResultSetExtractor.
++ RowMapper saves a lot of code because it internally adds the data of the ResultSet into the collection. 
++ It defines only one method ``mapRow`` the accepts ``ResultSet`` instance and ``int`` as parameter.
+
 - implement ``RowMapper`` interface and pass the pojo class for the object ``\<Contact>``, and override a
-method ``mapRow()``. 
+  method ``mapRow()``.
 
 ````java
 public class ContactRowMapper implements RowMapper<Contact> {

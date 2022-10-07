@@ -1,6 +1,7 @@
 package com.navi.modelSchool.repository;
 
 import com.navi.modelSchool.model.Contact;
+import com.navi.modelSchool.rommappers.ContactRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
