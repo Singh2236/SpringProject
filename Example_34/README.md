@@ -11,3 +11,4 @@
 
 Note: If the page is distorted, possible reasons would be, that the bootstrap, css or some other files are not able to
 accessed from the path, I am trying to use get it. 
+Never forget to stop you RDS Server, if you want to save your free credits and don't want to be billed from AWS. 
