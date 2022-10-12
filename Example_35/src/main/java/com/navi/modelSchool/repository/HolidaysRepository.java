@@ -2,26 +2,17 @@ package com.navi.modelSchool.repository;
 
 import com.navi.modelSchool.model.Holiday;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+//CrudRepo() Method Params: Holidays -> POJO Class String -> Data type of the primary key
+
 @Repository
-public class HolidaysRepository {
+public interface HolidaysRepository extends CrudRepository<Holiday, String> {
 
-    public final JdbcTemplate jdbcTemplate;
-
-    @Autowired
-    public HolidaysRepository(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
-    public List<Holiday> findAllHolidays() {
-        String sql = "SELECT * FROM holidays";
-        var rowMapper = BeanPropertyRowMapper.newInstance(Holiday.class);
-        return jdbcTemplate.query(sql, rowMapper);
-    }
 
 }

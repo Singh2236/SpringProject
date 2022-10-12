@@ -33,22 +33,6 @@ public class ContactController {
         return "contact.html"; // this contact.html referring to the same page not the fresh contact page.
     }
 
-
-    /*@PostMapping(value = "/saveMsg")
-    //@RequestMapping(value = "/saveMsg", method = POST)
-    public ModelAndView displayContactPage(@RequestParam String name, @RequestParam(value = "mobileNum") String mob,
-                                           @RequestParam String email, @RequestParam String subject,
-                                           @RequestParam String message) {
-        log.info("Name: " + name);
-        log.info("Mobile Number  " + mob);
-        log.info("Email:  " + email);
-        log.info("Subject: " + subject);
-        log.info("Msg:  " + message);
-
-        return new ModelAndView(("redirect:/contact"));
-
-    }*/
-
     @PostMapping(value = "/saveMsg")
     public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors) {  //How the fuck, this method knows about the variable coming from UI.
         if (errors.hasErrors()) {

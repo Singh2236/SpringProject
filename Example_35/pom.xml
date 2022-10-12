@@ -12,7 +12,7 @@
 	<artifactId>Example_35</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Example_35</name>
-	<description>Display Holidays from DB and Demo of BeanPropertyRowMapper</description>
+	<description></description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -66,10 +66,10 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>-->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
+		</dependency>-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
