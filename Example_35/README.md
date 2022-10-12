@@ -394,4 +394,5 @@ Do you know a derived query method name has two main components separated by the
    email) is same as findByEmail(String email)._
 
 **Supported Keywords inside method names** 
+
 ![](C:\Users\navka\Downloads\data-1.jpg)
