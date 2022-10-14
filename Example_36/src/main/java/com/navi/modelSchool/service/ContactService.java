@@ -6,10 +6,8 @@ import com.navi.modelSchool.model.Contact;
 import com.navi.modelSchool.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,15 +36,15 @@ public class ContactService {
     public boolean saveMessageDetails(Contact contact) {
         boolean isSaved = true;
         contact.setStatus(ModelSchoolConstants.OPEN);
-        contact.setCreatedBy(ModelSchoolConstants.ANONYMOUS);
-        contact.setCreatedAt(LocalDateTime.now());
+        /*contact.setCreatedBy(ModelSchoolConstants.ANONYMOUS);
+        contact.setCreatedAt(LocalDateTime.now());*/
 
         //Return type from the save method is Pojo class object along with Primary key, which is created and stored into
         // the database. This is the create operation with repo(crud).save() method.
         Contact saveContact = contactRepository.save(contact);
 
         //checking if the value is saved
-        if(null != saveContact && saveContact.getContactId() > 0 )
+        if (null != saveContact && saveContact.getContactId() > 0)
             isSaved = true;
 
         return isSaved;
@@ -58,9 +56,9 @@ public class ContactService {
         return contactMsgs;
     }
 
-    public boolean updateMsgStatus(int contactId, String updatedBy) {
+    public boolean updateMsgStatus(int contactId/*, String updatedBy*/) {
 
-        Boolean isUpdated =false;
+        Boolean isUpdated = false;
         //fetching the contact from the database according to id provided
         // contactRepository.findById(contactId) returns the POJO, if the data is not present inside the database it
         // will return null, this is the reason we have Optional of Contact.
@@ -70,15 +68,13 @@ public class ContactService {
         // lambda expression population with values to be modified
         contact.ifPresent(contact1 -> {
             contact1.setStatus(ModelSchoolConstants.CLOSE);
-            contact1.setUpdatedBy(updatedBy);
-            contact1.setUpdatedAt(LocalDateTime.now());
+           /* contact1.setUpdatedBy(updatedBy);
+            contact1.setUpdatedAt(LocalDateTime.now());*/
         });
 
         //saving the modified value
         //contact.get() --> since Contact object:contact is an optional, we have to call this method
         Contact updatedContactObject = contactRepository.save(contact.get());
-
-
 
 
         if (null != updatedContactObject && updatedContactObject.getUpdatedBy() != null) {
