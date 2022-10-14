@@ -85,16 +85,21 @@ Following are the steps. We are talking the help from the spring framework-
 1. Creation of Annotation (like for not accepting the weak password) and provide the class name where the actual
    validation logic present.
     1. Parts of Annotations
-        1. ``@Documented``
+        1. ``@Documented``  //optional
         2. ``@Constraint(validatedBy = {})`` --> Mention the location/package/class details of the annotation.
         3. ``@Target`` --> Targets are the fields, on the top of what, the annotations can be used.
-        4. ``@Retention(RUNTIME)`` --> Creation during the runtime or during the compilation.
+        4. ``@Retention(RUNTIME)`` --> Creation during the runtime or during the compilation. RUNTIME, ClASS, SCORE
         5. ``@Repeatable(List.class)`` --> Support mention multiple time on the top of a field.
         6. ``public @interface`` AnnotationName --> makes an interface, an annotation.
-        7. ``message()`` --> message invoked during the error. ``defalut`` is default. 
+        7. ``message()`` --> for dev to write his own msg, while implementing the anno. ``defalut`` is default. 
         8. ``groups()`` --> purpose of grouping the validations.
         9. ``payload()`` --> to put some logic in case of annotation validation fails, but rarely used by developers.
-        10. ``regex()`` and ``flag()`` --> to define your own regex pattern. 
+        10. ``regex()`` and ``flag()`` --> to define your own regex pattern.
+        11. Also handle repeatable nature, research for more details. 
+
+````java
+
+````
 
 2. Creation of the class that implements ``ConstraintValidator<annotationName,fieldDataTypeForUsageOfTheAnn> ``
    interface and overriding the ``isValid()`` method.
