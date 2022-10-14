@@ -1,78 +1,107 @@
-# Auditing Support by Spring Data JPA
+# New Registration, Custom Validations,OnetoOne Mapping Demo
 
-* Spring data provides sophisticated support to transparently keep tract of who created or changed an entity and when
-  the change happened. To benenefit from that functionality, you have to equip your entity class with metadata that can
-  be defined either using annotations or by implementing an interface.
-* Additionally, auditing has to be enabled either through Annotations configurations or XML configurations to register
-  the required infrastructure interface.
-* Below are the steps that needs to be followed -
+## Adding the link to front end login Page
 
-1. Use Annotations to indicate the audit related columns inside DB tables. Spring Data JPA ships with an entity listener
-   that can be used to trigger the capturing of auditing information. ``AuditingEntityListener`` has to be registered
-   for all the required entities.
-
-_Note: ``@CreateData``, ``@CreateBy``, ``@LastModifiedDate``, ``@LastModifiedBy`` are the key annotations that
-support JPA Auditing._
-
-````java
-@Data   //lombok
-@MappedSuperclass  //for Spring data jpa
-@EntityListeners(AuditingEntityListener.class) // for Auditing
-public class BaseEntity {
-
-    @CreatedDate
-    @Column(updatable = false) //during update operation, don't update this data field and so on.
-    private LocalDateTime createdAt;
-    @CreatedBy
-    @Column(updatable = false)
-    private String createdBy;
-    @LastModifiedDate
-    @Column(insertable = false)
-    private LocalDateTime updatedAt;
-    @LastModifiedBy
-    @Column(insertable = false)
-    private String updatedBy;
-}
+````thymeleafexpressions
+<a th:href="@{/public/register}" class="new-user text-right" href="">New User ?</a>
 ````
 
-2. Date Related info will be fetched from the server by JPA but for CreatedBy and UpdatedBy, we need to let JPA know how
-   to fetch that info by implementing ``AuditorAware`` interface like shown below-
+/public -> All the public accessed paths are to be configured in this dir. This is the easy was to Configure Spring
+Security.
+
+## Controller for this path
 
 ````java
-@Component("auditAwareImpl")
-public class AuditAwareImpl implements AuditorAware<String> {
-    @Override
-    public Optional<String> getCurrentAuditor() {
-        return Optional.ofNullable(SecurityContextHolder.getContext().getAuthentication().getName()); //name of the logged in user
+
+@Slf4j
+@Controller
+@RequestMapping("public")
+public class PublicController {
+
+    PersonService personService;
+
+    @RequestMapping(value = "/register", method = {RequestMethod.GET})
+    public String displayRegisterPage(Model model) {
+        model.addAttribute("person", new Person);
+        return "register.html";
     }
 }
 ````
 
-3. Enable JAP Auditing by annotating a configuration class with the ``@EnableJpaAuditing`` annotation.
+## Spring Security Configurations for `register.html`
 
-````java
-@SpringBootApplication
-@EnableJpaRepositories("com.navi.modelSchool.repository")
-@EntityScan("com.navi.modelSchool.model")
-@EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
-public class SchoolWebsite {
+``.mvcMatchers("/register").permitAll()``, this is not the correct path
+``.mvcMatchers("/public/register").permitAll()``, Not Dynamic, and absurd to use /public, if we don't
+use that in use.  
+``.mvcMatchers("/public/**").permitAll()``, Dynamic, and reusable, reduce configurations, for all the public links.
 
-    public static void main(String[] args) {
-        SpringApplication.run(SchoolWebsite.class, args);
-    }
+## More Security
 
+Since Spring Boot Security blocks all the POST/PUT requests, to avoid CSRF attacks, but our registration form is using
+POSt method
+
+``\<form th:action="@{/public/createUser}" method="post" class="signin-form" th:object="${person}">``
+
+and since registration is a public operation, no data to protect, no worries about csrf, --> disable CSRF for this path.
+
+`` http.csrf().ignoringAntMatchers("/public/**").and()......``
+
+# Validations
+
+1. Create Fields with Annotations on the top of them.
+2. In Spring MVC Controller classes --> method where Form is submitted by the action path --> Params
+    1. ``@Valid`` annotation,
+    2. Accept the POJO object @ModelAttribute("name of the object") Type newName,
+       dh ``@ModelAttribute("person") Person``
+       person.
+    3. Accept the Error object dh ``Error error``. if we find errors, throw to console log.
+
+````
+public String registerMethod(annotation1, 2, 3){
+        if error has errors{ 
+        error.toString();
+        return with errors to the same page.
+        }
+businesslogic.savemsg(PersonObject);
+return redirect to fresh same registration paath. 
 }
 ````
 
-_Note: We can also print the queries that are being formed and executed by Spring Data JPA by enabling the below
-properties,
+# Custom Validation annotations
 
-````application.properties
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-````
+Aim :Build three custom validations
+
+1. Make sure --> user is writing same email address --> email and confirm-email fields
+2. Make sure --> point 1 is valid for passwords.
+3. Restrict the user to choose weak passwords.
+
+There are no annotations available in both of our Validations Libraries dh ``java.validations.constraints.*`` and
+``org.hibernate.validator.constraints.*``. We build our own @Annotations or ValidationCustomLogic.
+
+### How to make a custom annotation.
+
+Following are the steps. We are talking the help from the spring framework-
+
+1. Creation of Annotation (like for not accepting the weak password) and provide the class name where the actual
+   validation logic present.
+    1. Parts of Annotations
+        1. ``@Documented``
+        2. ``@Constraint(validatedBy = {})`` --> Mention the location/package/class details of the annotation.
+        3. ``@Target`` --> Targets are the fields, on the top of what, the annotations can be used.
+        4. ``@Retention(RUNTIME)`` --> Creation during the runtime or during the compilation.
+        5. ``@Repeatable(List.class)`` --> Support mention multiple time on the top of a field.
+        6. ``public @interface`` AnnotationName --> makes an interface, an annotation.
+        7. ``message()`` --> message invoked during the error. ``defalut`` is default. 
+        8. ``groups()`` --> purpose of grouping the validations.
+        9. ``payload()`` --> to put some logic in case of annotation validation fails, but rarely used by developers.
+        10. ``regex()`` and ``flag()`` --> to define your own regex pattern. 
+
+2. Creation of the class that implements ``ConstraintValidator<annotationName,fieldDataTypeForUsageOfTheAnn> ``
+   interface and overriding the ``isValid()`` method.
+
+3. Mention the annotation that is created on the top of the field inside a POJO class. 
 
 
-+ Show-sql property will print the query on the console/logs whereas format_sql property will print the queries in the
-  readable friendly style. 
-+ Not recommended for production use, as in professional environments, it will affect the performance.
+
+
+
