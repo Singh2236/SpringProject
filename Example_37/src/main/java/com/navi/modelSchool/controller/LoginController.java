@@ -17,29 +17,31 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class LoginController {
 
-    @RequestMapping(value ="/login",method = { RequestMethod.GET, RequestMethod.POST })
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
     public String displayLoginPage(@RequestParam(value = "error", required = false) String error,
-                                   @RequestParam(value = "logout", required = false) String logout,Model model) {
+                                   @RequestParam(value = "logout", required = false) String logout,
+                                   @RequestParam(value = "register", required = false) String register,//updated
+                                   Model model) {
         String errorMessge = null;
-        if(error != null) {
+        if (error != null) {
             errorMessge = "Username or Password is incorrect !!";
-        }
-        if(logout != null) {
+        } else if (logout != null) {
             errorMessge = "You have been successfully logged out !!";
+        } else if (register != null) { //updated
+            errorMessge= "Your registration is successful. Login with registered credentials";
         }
-        model.addAttribute("errorMessage", errorMessge);
+            model.addAttribute("errorMessage", errorMessge);
         return "login.html";
     }
 
-    @RequestMapping(value="/logout", method = RequestMethod.GET)
-    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
+        if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
         return "redirect:/login?logout=true";
     }
-
 
 
 }

@@ -245,7 +245,42 @@ public class Person extends BaseEntity {
 }
 ````
 
-## Creating Controller method for ``register.html`` form action path
+## Creating Controller method inside ``PublicController`` for ``register.html`` form action path
+````java
+ @RequestMapping(value = "/createUser", method = {RequestMethod.POST})
+    public String createUser(@Valid @ModelAttribute("person") Person person, Errors errors) {
+        if (errors.hasErrors()) {
+            return "register.html";
+        }
+
+        return "redirect:/login?register=true";
+
+    }
+````
+
+## Updating the information in Login Controller for registration successful.
+
+````java
+public class LoginController {
+
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public String displayLoginPage(@RequestParam(value = "error", required = false) String error,
+                                   @RequestParam(value = "logout", required = false) String logout,
+                                   @RequestParam(value = "register", required = false) String register,//updated
+                                   Model model) {
+        String errorMessge = null;
+        if (error != null) {
+            errorMessge = "Username or Password is incorrect !!";
+        } else if (logout != null) {
+            errorMessge = "You have been successfully logged out !!";
+        } else if (register != null) { //updated
+            errorMessge= "Your registration is successful. Login with registered credentials";
+        }
+            model.addAttribute("errorMessage", errorMessge);
+        return "login.html";
+    }
+
+````
 
 
 
