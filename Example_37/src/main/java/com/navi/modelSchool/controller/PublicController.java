@@ -29,6 +29,8 @@ public class PublicController {
     public String createUser(@Valid @ModelAttribute("person") Person person, Errors errors) {
         if (errors.hasErrors()) {
             return "register.html";
+
+            //business logic
         }
 
         return "redirect:/login?register=true";
