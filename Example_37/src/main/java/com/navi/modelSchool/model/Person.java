@@ -13,12 +13,12 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Data
-@Entity
-@FieldsValueMatch.List({
+@Entity //for database
+@FieldsValueMatch.List({        //perform the validations on two fields i.e. pwd and confirmPwd and email and confirmEmail
         @FieldsValueMatch(
-                field = "pwd",
-                fieldMatch = "confirmPwd",
-                message = "Passwords do not match!"
+                field = "pwd",          //field1
+                fieldMatch = "confirmPwd",  //field2
+                message = "Passwords do not match!" //msg for errors
         ),
         @FieldsValueMatch(
                 field = "email",
@@ -54,7 +54,7 @@ public class Person extends BaseEntity {
 
     @NotBlank(message="Password must not be blank")
     @Size(min=5, message="Password must be at least 5 characters long")
-    @PasswordValidator
+    @PasswordValidator      //our custom validation
     private String pwd;
 
     @NotBlank(message="Confirm Password must not be blank")

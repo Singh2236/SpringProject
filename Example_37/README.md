@@ -98,13 +98,153 @@ Following are the steps. We are talking the help from the spring framework-
         11. Also handle repeatable nature, research for more details. 
 
 ````java
+@Constraint(validatedBy = FieldsValueMatchValidator.class) //class --> implements this interface and here logic resides.
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface FieldsValueMatch {
 
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+
+    String message() default "Fields values don't match!";
+
+    String field();  // First of two fields to be matched.
+
+    String fieldMatch(); // 2nd of two fields to be matched.
+
+    @Target({ElementType.TYPE})
+    @Retention(RetentionPolicy.RUNTIME)
+    @interface List {
+        FieldsValueMatch[] value();
+    }
+````
+
+````java
+@Documented //Optional and is this annotation is documented etc.
+@Constraint(validatedBy = PasswordStrengthValidator.class)
+@Target({ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface PasswordValidator {
+    String message() default "Please Choose Strong Password";
+
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+
+}
 ````
 
 2. Creation of the class that implements ``ConstraintValidator<annotationName,fieldDataTypeForUsageOfTheAnn> ``
    interface and overriding the ``isValid()`` method.
+````java
+public class FieldsValueMatchValidator implements ConstraintValidator<FieldsValueMatch, Object> {
+    private String field;
+    private String fieldMatch;
 
-3. Mention the annotation that is created on the top of the field inside a POJO class. 
+    @Override
+    public void initialize(FieldsValueMatch constraintAnnotation) {
+        this.field = constraintAnnotation.field();
+        this.fieldMatch = constraintAnnotation.fieldMatch();
+    }
+
+
+    @Override
+    public boolean isValid(Object value,ConstraintValidatorContext context) {
+        Object fieldValue = new BeanWrapperImpl(value)
+                .getPropertyValue(field);
+        Object fieldMatchValue = new BeanWrapperImpl(value)
+                .getPropertyValue(fieldMatch);
+        if (fieldValue != null) {
+            return fieldValue.equals(fieldMatchValue);
+        } else {
+            return fieldMatchValue == null;
+        }
+    }
+}
+````
+
+````java
+public class PasswordStrengthValidator implements ConstraintValidator<PasswordValidator, String> {
+
+    List<String> weakPasswords;
+
+
+    @Override
+    public void initialize(PasswordValidator passwordValidator) { // data/business logic needed to validations
+        weakPasswords = Arrays.asList("12345", "password", "qwerty"); //list to check weak passwords
+    }
+
+    @Override //if isValid fails, requirement of this particular business logic is not fulfilled.
+    public boolean isValid(String passwordField, ConstraintValidatorContext context) { //1.para = value entered by user, 2.param context from initialize method
+        return passwordField != null && (!weakPasswords.contains(passwordField));
+    }
+}
+````
+
+
+3. Mention the annotation that is created on the top of the field inside a POJO class dh in our case Person class.
+
+````java
+@Data
+@Entity //for database usage 
+@FieldsValueMatch.List({
+        @FieldsValueMatch(
+                field = "pwd",
+                fieldMatch = "confirmPwd",
+                message = "Passwords do not match!"
+        ),
+        @FieldsValueMatch(
+                field = "email",
+                fieldMatch = "confirmEmail",
+                message = "Email Addresses do not match!"
+        )
+
+})
+public class Person extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    private int personId;
+
+    @NotBlank(message = "Name must not be blank")
+    @Size(min = 3, message = "Name must be at least 3 characters long")
+    private String name;
+
+    @NotBlank(message = "Mobile number must not be blank")
+    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+    private String mobileNumber;
+
+    @NotBlank(message = "Email must not be blank.")
+    @Email(message = "Please provide a valid Email Address")
+    private String email;
+
+    @NotBlank(message = "Confirm Email must not be blank")
+    @Email(message = "Please provide a valid confirm email address" )
+    @Transient
+    private String confirmEmail;
+
+    @NotBlank(message="Password must not be blank")
+    @Size(min=5, message="Password must be at least 5 characters long")
+    @PasswordValidator
+    private String pwd;
+
+    @NotBlank(message="Confirm Password must not be blank")
+    @Size(min=5, message="Confirm Password must be at least 5 characters long")
+    @Transient
+    private String confirmPwd;
+
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST, targetEntity = Roles.class)
+    @JoinColumn(name = "role_id", referencedColumnName = "roleId",nullable = false)
+    private Roles roles;
+
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL, targetEntity = Address.class)
+    @JoinColumn(name = "address_id", referencedColumnName = "addressId",nullable = true)
+    private Address address;
+}
+````
+
 
 
 
