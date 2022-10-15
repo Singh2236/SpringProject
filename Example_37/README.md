@@ -287,27 +287,60 @@ public class LoginController {
 ````
 
 # Deep Dive into one-to-one relationships
+
 ![img.png](img.png)
-
-
 
 1. It is a One-TO-One relationship when a record in one entity is associated with exactly one record in another entity.
 2. Spring data JPA Allows developers to build one-to-one relationships between the entities with simple configurations.
    In our case, relationship b/w ``Person`` and his ``Address`` entities can be configured as below.
 
 ````java
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST, targetEntity = Roles.class)
+    @JoinColumn(name = "role_id", referencedColumnName = "roleId",nullable = false)
+    private Roles roles;
 
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL, targetEntity = Address.class)
+    @JoinColumn(name = "address_id", referencedColumnName = "addressId",nullable = true)
+    private Address address;
 ````
 
 3. This is declared using ``@OneToOne`` annotation. Using it we can configure ``FetchType``, ``cascade``
    , ``targetEntity``.
 4. ``@JoinColumn`` annotation is used to specify the foreign key column relationship details between the 2
    entities, ``name`` defines the name of the foreign key column, ``referencedColumnName`` indicates the field name
-   inside the target entity class, ``nullable`` defines weather the foreign key can be nullable or not. 
-
+   inside the target entity class, ``nullable`` defines weather the foreign key can be nullable or not.
 
 ## JPA Fetch
 
++ Based on the fetch configurations that the developer has done, JPA allows entities to load the object with which they
+  can have a relationship.
+    + We can declare the fetch value in the ``@OneToOne`` , ``@OneTOMany``, ``@ManyToOne`` and ``@ManyToMany``
+      annotations. These annotations have an attribute called ``fetch`` that serves to indicate the type of fetch we
+      want to perform. It has two valid values: ``FetchType.EAGER`` and  ``FetchType.LAZY``.
++ With Lazy configurations, we are telling JPA that we want to lazily load the relation entities, we when retrieving an
+  entity, its relation will not be loaded until unless we try to refer the related entity using the getter method. On
+  the contrary, with Eager it will load its relation entities as well.
++ By default, all ToMany relationships are LAZY, while ToOne relationships are EAGER.
+
+## Cascade Types
+
+1. Intro
+    1. JPA Allows us to propagate entire state changes from Parents to Child entities. This concept is called Cascading
+       in JPA.
+    2. The Cascade configurations options accepts an array of cascade types.
+2. Cascade Types-
+    1. ``CascadeType.PERSIST`` : save() or persist() operations cascade to related entities.
+    2. ``CascadeType.MERGE`` : related entities merger when the owning entity is merged e.g. update or modify operations.
+    3. ``CascadeType.REFRESH`` : child entity also gets loaded from the database whenever the parent entity is refreshed.
+    4. ``CascadeType.REMOVE`` : propagates the remove operation from parent to child.
+    5. ``CascadeType.DETACH`` : detach all child entities if a "manual detach" occurs for parent.
+    6. ``CascadeType.ALL`` : have functions of all the about entities. 
+3. Best Practices-
+    1. Makes only sense for Parent-Child associations(where the Parent entity state transition being cascaded to its
+       Child entities). Cascading from Child to Parent is not vary useful and not recommended.
+    2. There is no default cascade type in JPA. By default, no operation is cascaded. 
 
 
+
+The Rest is same as you have --> Person Service class --> Person Repo, Roles Repos --> Persistence logic save().
 

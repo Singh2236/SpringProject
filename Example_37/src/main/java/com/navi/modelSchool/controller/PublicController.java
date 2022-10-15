@@ -3,6 +3,7 @@ package com.navi.modelSchool.controller;
 import com.navi.modelSchool.model.Person;
 import com.navi.modelSchool.service.PersonService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -17,6 +18,7 @@ import javax.validation.Valid;
 @RequestMapping("public")
 public class PublicController {
 
+    @Autowired
     PersonService personService;
 
     @RequestMapping(value = "/register", method = {RequestMethod.GET})
@@ -30,10 +32,13 @@ public class PublicController {
         if (errors.hasErrors()) {
             return "register.html";
 
-            //business logic
         }
 
-        return "redirect:/login?register=true";
-
+        boolean isSaved = personService.createNewPerson(person);
+        if (isSaved) {
+            return "redirect:/login?register=true";
+        } else {
+            return "register.html";
+        }
     }
 }
