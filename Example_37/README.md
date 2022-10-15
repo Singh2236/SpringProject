@@ -245,6 +245,9 @@ public class Person extends BaseEntity {
 }
 ````
 
+## Creating Controller method for ``register.html`` form action path
+
+
 
 
 
