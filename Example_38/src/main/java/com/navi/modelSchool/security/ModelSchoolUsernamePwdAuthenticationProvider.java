@@ -57,7 +57,7 @@ public class ModelSchoolUsernamePwdAuthenticationProvider implements Authenticat
     private List<GrantedAuthority> getGrantedAuthorities(Roles roles) {
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         // Simple Granted Authority
-        grantedAuthorities.add(new SimpleGrantedAuthority("Role_" + roles.getRoleName())); //Methods from the Roles class
+        grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_" + roles.getRoleName())); //Methods from the Roles class
         return grantedAuthorities;
     }
 
