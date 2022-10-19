@@ -93,10 +93,84 @@ public class PersonService {
 
 3. Login Configurations, getting the password from the user, hashing it with the Password Encoder, which is
    BCryptPasswordEncoder in our case and checking the hashed values inside our DB against the hashed value from the
-   password of the user. Class ``ModelSchoolUsernamePwdAuthenticationProvider``
+   password of the user. Class ``ModelSchoolUsernamePwdAuthenticationProvider``. Important function -
+    1. passwordEncoder.matches(rawPwd, storedEncodedPwd).
 
 ````java
-
+@Component //making bean of this java class
+public class ModelSchoolUsernamePwdAuthenticationProvider implements AuthenticationProvider {
+    @Autowired
+    private PersonRepository personRepository; // to check the credentials from the DB
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    /*
+    Authentication authenticate() method for our own custom logic.
+     */
+    @Override
+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        String email = authentication.getName(); //Authentication is the object from the User LogIn page : here we are getting an Email from that authentication method
+        String pwd = authentication.getCredentials().toString();
+        Person person = personRepository.readByEmail(email); //getting person object by providing the email, readByEmail: Derived by Query in Person Repo
+        /*logic for comparing Credentials from the user with Credentials present in the DB
+        check for if we have got the person object by the email we have provided.
+        Check if the id of that person is greater than 0
+        Check if the passwords are matching, for that, PasswordEncoder has matches(raw, encoded) method.
+        if ja:
+            return the UserPasswordAuthenticationToken --> Parameters: Name, Password, and Granted Authorities(Role)
+            Granted Authorities(Role) of  'Collection<? extends GrantedAuthority> authorities' type, List because it can
+            accept multiple roles.
+        If no:
+            throwing an exception : BadCredentialsException : "Invalid Credentials"
+         */
+        if (null != person && person.getPersonId() > 0 && passwordEncoder.matches(pwd, person.getPwd())){
+            return new UsernamePasswordAuthenticationToken(person.getName(), null, getGrantedAuthorities(person.getRoles()));
+        }else{
+            throw new BadCredentialsException("Invalid Credentials");
+        }
+    }
+    // getting the information about the Roles and giving to Authentication object in a way that Spring Security can understand.
+    // Roles parameters are the roles from the database and referenced to Roles POJO class
+    private List<GrantedAuthority> getGrantedAuthorities(Roles roles) {
+        List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+        // Simple Granted Authority
+        grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_" + roles.getRoleName())); //Methods from the Roles class
+        return grantedAuthorities;
+    }
+    @Override
+    public boolean supports(Class<?> authentication) {
+        //checking weather given authentication type object is of same data type UsernamePasswordAuthenticationToken?
+        // if it is same, then only Spring Security will try to execute our business logic, that we have written in our
+        // authenticate method above.
+        return authentication.equals(UsernamePasswordAuthenticationToken.class);
+    }
 ````
+4. Bypassing JPA validations during saving transaction. Since Spring Boot MVC has validated all the entries for the
+first time, and the pwd is encoded, now JPA is validation the fields but the password is encoded, hence the
+fields are not matching, so we are bypassing this validation if the password is starting from ``$2a`` because
+that's the hashed password. Class ``FieldsValueMatchValidator``
+
+````java
+@Override
+    public boolean isValid(Object value, ConstraintValidatorContext context) {
+        Object fieldValue = new BeanWrapperImpl(value)
+                .getPropertyValue(field);
+        Object fieldMatchValue = new BeanWrapperImpl(value)
+                .getPropertyValue(fieldMatch);
+        if (fieldValue != null) {
+            if (fieldValue.toString().startsWith("$2a")) {
+                return true;
+            } else {
+                return fieldValue.equals(fieldMatchValue);
+            }
+        } else {
+            return fieldMatchValue == null;
+        }
+    }
+}
+````
+
+
+
+
 
 

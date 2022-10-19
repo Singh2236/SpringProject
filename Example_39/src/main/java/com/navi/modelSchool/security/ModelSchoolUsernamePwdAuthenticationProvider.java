@@ -4,7 +4,6 @@ import com.navi.modelSchool.model.Person;
 import com.navi.modelSchool.model.Roles;
 import com.navi.modelSchool.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -43,7 +42,7 @@ public class ModelSchoolUsernamePwdAuthenticationProvider implements Authenticat
         /*logic for comparing Credentials from the user with Credentials present in the DB
         check for if we have got the person object by the email we have provided.
         Check if the id of that person is greater than 0
-        Check if the passwords are matching.
+        Check if the passwords are matching, for that, PasswordEncoder has matches(raw, encoded) method.
         if ja:
             return the UserPasswordAuthenticationToken --> Parameters: Name, Password, and Granted Authorities(Role)
             Granted Authorities(Role) of  'Collection<? extends GrantedAuthority> authorities' type, List because it can
@@ -51,8 +50,8 @@ public class ModelSchoolUsernamePwdAuthenticationProvider implements Authenticat
         If no:
             throwing an exception : BadCredentialsException : "Invalid Credentials"
          */
-        if (null != person && person.getPersonId() > 0 && pwd.equals(person.getPwd())) {
-            return new UsernamePasswordAuthenticationToken(person.getName(), pwd, getGrantedAuthorities(person.getRoles()));
+        if (null != person && person.getPersonId() > 0 && passwordEncoder.matches(pwd, person.getPwd())){
+            return new UsernamePasswordAuthenticationToken(person.getName(), null, getGrantedAuthorities(person.getRoles()));
         }else{
             throw new BadCredentialsException("Invalid Credentials");
         }
