@@ -184,7 +184,31 @@ public class ProfileController {
    user wants to see. In this way, we don't have to query the database for the same information again and again. We can
    simply fetch from the session, which we will store in the dashboard controller. 
     1. Dashboard controller class modifications-
+    2. HttpSession for saving object to the session. 
+````java
+@Slf4j
+@Controller
+public class DashboardController {
 
+   @Autowired
+   PersonRepository personRepository;
+
+   @RequestMapping("/dashboard")
+   public String displayDashboard(Model model, Authentication authentication, HttpSession httpSession) {
+      Person person = personRepository.readByEmail(authentication.getName()); // through get Name we are going to get the email of the user
+      model.addAttribute("username", person.getName()); //once we have a person we can get his name
+      model.addAttribute("roles", authentication.getAuthorities().toString());
+      httpSession.setAttribute("logedInPerson", person);  //storing person's information to the session. 
+      return "dashboard.html";
+   }
+
+}
+````
+
+7. Modifying step 5 in order to get person details from the httpsession where we have saved the person data. 
+````java
+
+````
 
 
 
