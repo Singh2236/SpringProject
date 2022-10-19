@@ -26,11 +26,12 @@ public class FieldsValueMatchValidator implements ConstraintValidator<FieldsValu
 
 
         if (fieldValue != null) {
-            if (fieldValue.toString().startsWith("$2a")) {
+            /*if (fieldValue.toString().startsWith("$2a")) {
                 return true;
             } else {
                 return fieldValue.equals(fieldMatchValue);
-            }
+            }*/
+            return fieldValue.equals(fieldMatchValue);
         } else {
             return fieldMatchValue == null;
         }

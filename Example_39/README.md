@@ -169,7 +169,8 @@ that's the hashed password. Class ``FieldsValueMatchValidator``
 }
 ````
 
-
+5. You can also disable the second time validations by putting the following property in the application.properties file.
+``spring.jpa.properties.javax.persistance.validation.mode = none``
 
 
 
