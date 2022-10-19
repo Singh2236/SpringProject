@@ -163,9 +163,10 @@ public class Profile {
    step
    2.** Specifications-
     1. Create Profile object to send it to the UI by sending it through our model and view Object by adding attributes
-       to the ModelAndView Controller. 
+       to the ModelAndView Controller.
 
 ````java
+
 @Slf4j
 @Controller
 public class ProfileController {
@@ -179,6 +180,10 @@ public class ProfileController {
 }
 ````
 
+6. Displaying the data in the profile page form, we are saving the data to the session, which we can show anytime the
+   user wants to see. In this way, we don't have to query the database for the same information again and again. We can
+   simply fetch from the session, which we will store in the dashboard controller. 
+    1. Dashboard controller class modifications-
 
 
 
