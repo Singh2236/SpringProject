@@ -4,6 +4,7 @@ import com.navi.modelSchool.model.Person;
 import com.navi.modelSchool.model.Roles;
 import com.navi.modelSchool.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -11,6 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -22,6 +24,9 @@ public class ModelSchoolUsernamePwdAuthenticationProvider implements Authenticat
     @Autowired
     private PersonRepository personRepository; // to check the credentials from the DB
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
 
     /*
     Authentication authenticate() method for our own custom logic.
@@ -30,6 +35,8 @@ public class ModelSchoolUsernamePwdAuthenticationProvider implements Authenticat
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String email = authentication.getName(); //Authentication is the object from the User LogIn page : here we are getting an Email from that authentication method
         String pwd = authentication.getCredentials().toString();
+
+
         Person person = personRepository.readByEmail(email); //getting person object by providing the email, readByEmail: Derived by Query in Person Repo
 
 
