@@ -55,5 +55,51 @@ public class AdminController {
         return modelAndView;
     }
 ````
+## New Table in the Database and adding new column in the Person table 
+
+````mysql
+CREATE TABLE IF NOT EXISTS `class` (
+    `class_id` int NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    `created_by` varchar(50) NOT NULL,
+    `updated_at` TIMESTAMP DEFAULT NULL,
+    `updated_by` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`class_id`)
+);
+
+ALTER TABLE `person`
+    ADD COLUMN `class_id` int NULL AFTER `address_id`,
+ADD CONSTRAINT `FK_CLASS_CLASS_ID` FOREIGN KEY (`class_id`)
+REFERENCES `class`(`class_id`);
+````
 
 ## Creating the tables for classes
+````java
+@Data
+@Entity
+@Table(name = "class")
+public class ModelClass extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    private int classId;
+
+    @NotBlank(message = "Name must not be blank")
+    @Size(min = 3, message = "Name must be at least 3 characters long")
+    private String name;
+
+    @OneToMany(mappedBy = "modelClass", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, targetEntity = Person.class)
+    private Set<Person> persons;
+}
+````
+
+## Adding an extra column in the database Entity for the joining the two tables 
+
+````java
+@ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "class_id", referencedColumnName = "classId" ,nullable = true)
+    private ModelClass modelClass;
+````
+

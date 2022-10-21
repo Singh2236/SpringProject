@@ -24,8 +24,4 @@ public class ModelClass extends BaseEntity {
 
     @OneToMany(mappedBy = "modelClass", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, targetEntity = Person.class)
     private Set<Person> persons;
-
-
-
-
 }
