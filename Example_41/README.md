@@ -103,3 +103,25 @@ public class ModelClass extends BaseEntity {
     private ModelClass modelClass;
 ````
 
+## Adding a new attribute to the modelAndView Object, so that the admin can add classes.
+
+``modelAndView.addObject("modelClass", new ModelClass());``
+
+````java
+@Slf4j
+@Controller
+@RequestMapping("admin") // for common admin prefix admin
+public class AdminController {
+
+    @RequestMapping("/displayClasses")
+    public ModelAndView displayClasses(Model model) {
+        ModelAndView modelAndView = new ModelAndView("classes.html");
+        modelAndView.addObject("modelClass", new ModelClass());
+        return modelAndView;
+    }
+}
+````
+## Create a new Template for classes.html
+
+
+
