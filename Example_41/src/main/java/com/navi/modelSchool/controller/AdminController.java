@@ -18,9 +18,4 @@ public class AdminController {
         modelAndView.addObject("modelClass", new ModelClass());
         return modelAndView;
     }
-    @RequestMapping("/displayCourses")
-    public ModelAndView displayCourses(Model model) {
-        ModelAndView modelAndView = new ModelAndView("courses.html");
-        return modelAndView;
-    }
 }
