@@ -123,5 +123,17 @@ public class AdminController {
 ````
 ## Create a new Template for classes.html
 
+check the file for more information
 
+## Adding and Deleting classes Enhancement inside our Application
+1. Building a method inside AdminController for the path ``/admin/addNewClass`` 
+2. New Repo for ModelClass
+``@Repository
+   public interface ModelClassRepository extends JpaRepository<ModelClass, Integer> {
+   }``
+3. Autowire ModelClass class and Person class repositories in the AdminController class.
+
+````java
+
+````
 
