@@ -4,6 +4,8 @@ import com.navi.modelSchool.annotations.FieldsValueMatch;
 import com.navi.modelSchool.annotations.PasswordValidator;
 import lombok.Data;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -12,7 +14,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Data
+@Setter
+@Getter
 @Entity //for database
 @FieldsValueMatch.List({        //perform the validations on two fields i.e. pwd and confirmPwd and email and confirmEmail
         @FieldsValueMatch(

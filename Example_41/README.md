@@ -125,15 +125,66 @@ public class AdminController {
 
 check the file for more information
 
-## Adding and Deleting classes Enhancement inside our Application
+## Adding and Deleting classes and /displayStudents Enhancement inside our Application
+
 1. Building a method inside AdminController for the path ``/admin/addNewClass`` 
 2. New Repo for ModelClass
 ``@Repository
    public interface ModelClassRepository extends JpaRepository<ModelClass, Integer> {
    }``
-3. Autowire ModelClass class and Person class repositories in the AdminController class.
-
+3. Autowire ModelClass class and Person class repositories in the AdminController class
 ````java
+@Slf4j
+@Controller
+@RequestMapping("admin") // for common admin prefix admin
+public class AdminController {
+   @Autowired
+   ModelClassRepository modelClassRepository;
 
+   @Autowired
+   PersonRepository personRepository;
+
+   @RequestMapping("/displayClasses")
+   public ModelAndView displayClasses(Model model) {
+      List<ModelClass> modelClasses = modelClassRepository.findAll(); //get all the classes available in the database
+      ModelAndView modelAndView = new ModelAndView("classes.html");
+      modelAndView.addObject("modelClasses", modelClasses);  // model full of all the classes information
+      modelAndView.addObject("modelClass", new ModelClass()); //empty object to get the information of the new class from the front end
+      return modelAndView;
+   }
+
+   @PostMapping("/addNewClass")
+   public ModelAndView addNewClass(Model model, @ModelAttribute("modelClass") ModelClass modelClass) {
+      modelClassRepository.save(modelClass);
+      ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayClasses");
+      return modelAndView;
+   }
+
+   @RequestMapping("/deleteClass")
+   public ModelAndView deleteClass(Model model, @RequestParam int id) {
+      Optional<ModelClass> modelClass = modelClassRepository.findById(id);
+      for (Person person : modelClass.get().getPersons()) {
+         person.setModelClass(null); //making the class fields in the person table to null before deleting the class
+         personRepository.save(person);
+      }
+      modelClassRepository.deleteById(id);
+
+      ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayClasses");
+      return modelAndView;
+
+
+   }
+
+   @GetMapping("/displayStudents")
+   public ModelAndView displayStudents(Model model, @RequestParam int classId) {
+      ModelAndView modelAndView = new ModelAndView("students.html");
+      return modelAndView;
+   }
 ````
+
+## Adding code for View Classes in the backend 
+There should be the list of all the students in that perticular class. 
+we have modelAndView object in the above code which is "``students.html``", make a template for this link. 
+
+
 
