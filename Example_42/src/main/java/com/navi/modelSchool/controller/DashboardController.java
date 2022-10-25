@@ -23,6 +23,11 @@ public class DashboardController {
         Person person = personRepository.readByEmail(authentication.getName()); // through get Name we are going to get the email of the user
         model.addAttribute("username", person.getName()); //once we have a person we can get his name
         model.addAttribute("roles", authentication.getAuthorities().toString());
+
+        if (null != person.getModelClass() && null != person.getModelClass().getName()) {
+            model.addAttribute("enrolledClass", person.getModelClass().getName());
+        }
+
         httpSession.setAttribute("loggedInPerson", person);  //storing person's information to the session.
       return "dashboard.html";
     }
