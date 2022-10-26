@@ -107,7 +107,7 @@ public class AdminController {
 
     @GetMapping("/displayCourses")
     public ModelAndView displayCourses(Model model) {
-        List<Courses> courses = coursesRepository.findAll();
+        List<Courses> courses = coursesRepository.findByOrderByNameDesc();
         ModelAndView modelAndView = new ModelAndView("courses_secure.html"); //since we already have courses.html
         modelAndView.addObject("courses", courses); //List of all the courses in the DB for Table view
         modelAndView.addObject("course", new Courses());//sending an empty object for new Course objects
